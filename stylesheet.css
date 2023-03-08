@@ -109,7 +109,6 @@ main{
 .intro-desc{
     font-family: 'Assistant';
     font-weight: 300;
-    width: 390px;
 }
 
 .about-me-section, .my-skills-section{
@@ -334,7 +333,7 @@ main{
 
     .intro-section{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-content: center;
         flex-direction: column;
         font-size: medium;
@@ -342,7 +341,9 @@ main{
     }
     
     .intro-text{
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition: 0.4s ease;
     }
 
@@ -354,6 +355,11 @@ main{
         width: 160px;
         height: 160px;
         border-radius: 100%;
+    }
+
+    .about-me-desc{
+        font-size: small;
+        width: 25vh;
     }
 }
 
@@ -398,6 +404,10 @@ main{
         transition: 0.4s ease;
         margin-top: 0.5rem;
         gap: 55vh;
+    }
+
+    .intro-desc{
+        width: 390px;
     }
 
     .intro-image img{
