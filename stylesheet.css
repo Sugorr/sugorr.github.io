@@ -15,6 +15,30 @@ body{
     background-color: #1E1E1E;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #00000000; 
+    border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #455F90;
+}
+
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
