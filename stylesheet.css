@@ -232,12 +232,17 @@ main{
 
 .projects-rect{
     background-color: #455F90;
-    width: 120px;
-    height: 120px;
-    margin: 0.7rem;
+    width: 240px;
+    height: 240px;
+    margin: 0.1rem;
     text-decoration: none;
     color: white;
 }
+
+.projects-rect img{
+    width: 100%;
+}
+
 
 .contact-section{
     display: flex;
@@ -395,22 +400,22 @@ main{
         animation-play-state: paused;
     }
 
-    .projects-rect:after{
+    .projects-rect::before{
         content: 'See Project';
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 120px;
-        height: 120px;
+        width: 240px;
+        height: 240px;
         opacity: 0;
-        background-color: rgba(0, 0, 0, 0.518);
+        background-color: rgba(0, 0, 0, 0.8);
         transition: 0.3s ease;
         cursor: pointer;
         font-family: 'Montserrat', sans-serif;
     }
 
-    .projects-rect:hover::after{
+    .projects-rect:hover::before{
         opacity: 1;
     }
 }
