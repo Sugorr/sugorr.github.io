@@ -221,20 +221,6 @@ main{
     margin-bottom: 12em;
 }
 
-.type-project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 15px;
-}
-
-.type-project > p{
-    font-family: 'Montserrat', sans-serif;
-    font-size: larger;
-    padding: 12px;
-}
-
 .projects-list{
     display: flex;
     justify-content: center;
