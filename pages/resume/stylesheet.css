@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: #1E1E1E;
+}
+
+header{
+    padding-top: 30px;
+}
+
+.logo-section a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: xx-large;
+    transition: 0.3s ease;
+}
+
+.logo-section a:hover{
+    color: #455F90;
+}
+
+.main-body{
+    width: 80%;
+}
+
+table {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-style: hidden;
+    
+}
+
+table td{
+    padding: 2rem;
+    border: 2px solid #455F90;
+}
+
+
+.upper-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+#name-section{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 16px;
+}
+
+#name-section span{
+    color: #455F90;
+}
+
+#occupation-section{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 16px;
+    margin-top: 8px;
+}
+
+#pfp-section img{
+    width: 150px;
+    border-radius: 100%;
+}
+
+#contacts{
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#contacts i{
+    padding: 6px;
+    color: #455F90;
+}
+
+#contacts table{
+    padding: 5px;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+#contacts td{
+    padding: 0px;
+    border: 0px;
+}
+
+#skills{
+    height: 120px;
+}
+
+#skills p{
+    font-size: 16px;
+    text-align: center;
+}
+
+#skills li{
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+#educations p{
+    font-size: 16px;
+    text-align: center;
+}
+
+#educations h4{
+    font-family: 'Oswald', sans-serif;
+}
+
+#educations h5{
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#profile h1{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#profile p{
+    font-weight: 300;
+}
+
+
+#experience{
+    padding: 2rem;
+    text-align: left;
+}
+
+.exp-sect{
+    font-weight: 300;
+    margin-top: 64px;
+}

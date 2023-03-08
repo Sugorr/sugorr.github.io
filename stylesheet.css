@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1E1E1E;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+.menu-btn button:hover{
+    background-color: #455F90;
+    color: white;
+    box-shadow: 0px 0px 4px 2px #455F90; 
+}
+
+.main-menu > .navbar-toggler{
+    border: 0px;
+}
+
+.main-menu-dropdown a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.main-menu-dropdown a:hover{
+    color: #455F90;
+    padding-left: 10px;   
+    padding-right: 10px;   
+}
+
+
+.socmed-links a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+.socmed-links a:hover i{
+    color: #455F90;
+}
+
+main{
+    background-image: url(images/image.png);
+    background-size: 75%;
+    background-position: 40px;
+    background-position-y: 120px;
+    background-repeat: no-repeat;
+}
+
+.intro-name, .intro-name span{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.intro-name span{
+    color: #455F90;
+}
+
+
+.intro-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-desc{
+    font-family: 'Assistant';
+    font-weight: 300;
+    width: 390px;
+}
+
+.about-me-section, .my-skills-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    margin-top: 12em;
+    margin-bottom: 12em;
+}
+
+.section-title{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.about-me-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-me-name{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.about-me-name span{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    color: #455F90;
+}
+
+.about-me-desc{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    width: 60%;
+}
+
+.resume-button{
+    margin-top: 40px;
+    padding: 15px;
+}
+
+.resume-button button{
+    text-decoration: none;
+    background-color: #00000000;
+    border: 0px;
+}
+
+.resume-button button a{
+    padding: 15px;
+    border: 2px solid #455F90;
+    border-radius: 50px;
+    background-color: #00000000;
+    color: #455F90;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resume-button button:hover a{
+    background-color: #455F90;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.skill-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+}
+
+.skill-icons button{
+    margin-top: 15px;
+    margin: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.skill-icons button:hover{
+    border: 2px solid #455F90;
+    box-shadow: 0px 0px 8px 4px #455F90;
+}
+
+.skill-icons svg{
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+    margin: 12px;
+}
+
+
+.projects-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    margin-top: 12em;
+    margin-bottom: 12em;
+}
+
+.projects-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 60%;
+}
+
+.projects-rect{
+    background-color: #455F90;
+    width: 120px;
+    height: 120px;
+    margin: 0.7rem;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 130px;
+    margin-top: 12em;
+    margin-bottom: 12em;
+}
+
+.contact-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-desc > p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.contact-desc button{
+    text-decoration: none;
+    background-color: #00000000;
+    border: 0px;
+    margin-top: 120px;
+    transition: 0.5s ease;
+}
+
+.contact-desc button a{
+    padding: 15px;
+    border: 2px solid #455F90;
+    border-radius: 50px;
+    background-color: #00000000;
+    color: #455F90;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-desc button:hover a{
+    background-color: #455F90;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .logo-sugor{
+        font-size: x-large;
+    }
+
+    .main-menu-dropdown{
+        display: none;
+    }
+
+    .menu-btn button{
+        display: none;
+    }
+
+    .intro-section{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: column;
+        font-size: medium;
+        transition: 0.4s ease;
+    }
+    
+    .intro-text{
+        text-align: center;
+        transition: 0.4s ease;
+    }
+
+    .intro-image{
+        text-align: center;
+    }
+
+    .intro-image img{
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .navbar .logo-sugor{
+        font-size: xx-large;
+        font-weight: 700;
+        transition: 0.4s ease;
+    }
+
+    .logo-sugor:hover{
+        color: #455F90;
+        cursor: default;
+    }
+
+
+    
+    .main-menu-dropdown{
+        display: flex;
+        padding: 0;
+        gap: 15px;
+        list-style-type: none;
+        transition: 0.32s ease;
+    }
+
+    .menu-btn button{
+        font-size: medium;
+        padding: 8px;
+        background-color: #1E1E1E;
+        color: #455F90;
+        border: 2px solid #455F90;
+        border-radius: 25px;
+        transition: 0.4s ease;
+    }
+
+    .intro-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: medium;
+        transition: 0.4s ease;
+        margin-top: 0.5rem;
+        gap: 55vh;
+    }
+
+    .intro-image img{
+        width: 200px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 105px 180px 105px 200px;
+    }
+
+    .intro-image img{
+        animation-name: image-hover-anim;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .intro-image img:hover{
+        animation-play-state: paused;
+    }
+
+    .projects-rect:after{
+        content: 'See Project';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.518);
+        transition: 0.3s ease;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .projects-rect:hover::after{
+        opacity: 1;
+    }
+}
+
+@keyframes image-hover-anim{
+    0%{
+        border-radius: 105px 180px 105px 200px;
+        box-shadow: 3px 0px 12px 2px #455f903c; 
+    }
+    25%{
+        border-radius: 145px 90px 185px 145px;
+        box-shadow: 3px 2px 12px 2px #455f903c; 
+    }
+    50%{
+        border-radius: 105px 135px 125px 67px;
+        box-shadow: 1px 4px 12px 2px #455f903c; 
+    }
+    75%{
+        border-radius: 215px 65px 195px 185px;
+        box-shadow: -3px 2px 12px 2px #455f903c; 
+    }
+    100%{
+        border-radius: 105px 180px 105px 200px;
+        box-shadow: 3px 0px 12px 2px #455f903c; 
+    }
+}
