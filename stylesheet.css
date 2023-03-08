@@ -221,6 +221,20 @@ main{
     margin-bottom: 12em;
 }
 
+.type-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.type-project > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    padding: 12px;
+}
+
 .projects-list{
     display: flex;
     justify-content: center;
@@ -243,6 +257,24 @@ main{
     width: 100%;
 }
 
+.projects-rect::before{
+    content: 'See Project';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.projects-rect:hover::before{
+    opacity: 1;
+}
 
 .contact-section{
     display: flex;
@@ -400,24 +432,7 @@ main{
         animation-play-state: paused;
     }
 
-    .projects-rect::before{
-        content: 'See Project';
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 240px;
-        height: 240px;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        transition: 0.3s ease;
-        cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
-    }
 
-    .projects-rect:hover::before{
-        opacity: 1;
-    }
 }
 
 @keyframes image-hover-anim{
