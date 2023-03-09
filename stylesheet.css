@@ -7,8 +7,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html, *{
+    scroll-behavior: smooth !important;
 }
 
 body{
@@ -133,6 +133,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: left;
 }
 
 .about-me-name{
@@ -312,6 +313,43 @@ main{
 }
 
 
+.go-back-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.go-back-up > button{
+    text-decoration: none;
+    background-color: #00000000;
+    border: 0px;
+    color: #455F90;
+}
+
+.go-back-up > button > a{
+    text-decoration: none;
+    background-color: #00000000;
+    color: #455F90;
+    padding: 10px;
+    border: 2px solid #455F90;
+    border-radius: 50px;
+    transition: 0.2s ease-in;
+}
+
+.go-back-up > button > a > i{
+    color: #455F90;
+}
+
+.go-back-up > button:hover > a{
+    background-color: #455F90;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.go-back-up > button:hover > a > i{
+    color: white;
+}
 
 @media screen and (max-width: 768px) {
     .navbar{
