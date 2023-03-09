@@ -437,12 +437,11 @@ main{
 
     .intro-section{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         font-size: medium;
         transition: 0.4s ease;
         margin-top: 0.5rem;
-        gap: 55vh;
     }
 
     .intro-desc{
