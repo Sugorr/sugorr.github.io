@@ -226,11 +226,10 @@ main{
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    width: 60%;
+    width: 100%;
 }
 
 .projects-rect{
-    background-color: #455F90;
     width: 240px;
     height: 240px;
     margin: 0.1rem;
@@ -239,7 +238,8 @@ main{
 }
 
 .projects-rect img{
-    width: 100%;
+    width: 240px;
+    height: 240px;
 }
 
 .projects-rect::before{
