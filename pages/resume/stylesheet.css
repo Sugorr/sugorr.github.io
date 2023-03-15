@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
 
-body{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -12,6 +18,14 @@ body{
 
 header{
     padding-top: 30px;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo-section a{
@@ -24,6 +38,11 @@ header{
 
 .logo-section a:hover{
     color: #455F90;
+}
+
+.logo-section a i{
+    margin-right: 14px;
+    font-size: 24px;
 }
 
 
@@ -45,8 +64,17 @@ table td{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 3rem;
     margin-bottom: 5rem;
+}
+
+.upper-body .text-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #name-section{
@@ -144,3 +172,12 @@ table td{
     font-weight: 300;
     margin-top: 64px;
 }
+
+.lower-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+

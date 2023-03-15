@@ -1,261 +1,295 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    color: white;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
-html, *{
-    scroll-behavior: smooth !important;
+html{
+    scroll-behavior: smooth;
+}
+ 
+/*=======================================================================*/
+/*Intro Section*/
+
+.intro-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    height: 100vh;
+    gap: 60px;
+    padding: 1rem;
 }
 
-body{
+.intro-section > div{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.intro-section > div > h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.intro-section > div > h5{
+    font-size: 1.2rem;
+    color: #455F90;
+}
+
+.intro-section > button{
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.intro-section > button > a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.8em;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.3s ease;
+}
+
+.intro-section > button > a:hover{
+    background-color: #455F90;
+    border: 2px solid #455F90;
+}
+
+.intro-section > button > a{
+    text-decoration: none;
+}
+
+.fa-arrow-right{
+    transition: 0.3s ease;
+}
+
+.intro-section > button:hover .fa-arrow-right{
+    transform: rotate(90deg);
+}
+
+
+
+/*=======================================================================*/
+/*Header and NavBar Section*/
+header{
+    background-color: #455F90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: 1s ease;
+
+}
+
+header > nav > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 1.2rem;
+    font-size: 12px;
+}
+
+header > nav > ul > li a{
+    text-decoration: none;
+    transition: 0.5s ease;
+    font-size: 1rem;
+    padding: 0.3em;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+header > nav > ul > li a:hover{
+    text-decoration: none;
+    transition: 0.5s ease;
+    border: 1px solid white;
+}
+
+
+/*=======================================================================*/
+/*Main Section*/
+.port-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: #1E1E1E;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 6px;
+.sect-title{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+/*=======================================================================*/
+
+/*== ABOUT ME ==*/
+#about-me-section{
+    justify-content: space-evenly;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #00000000; 
-    border-radius: 15px;
+#name-intro{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1em;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #555; 
-    border-radius: 15px;
+#name-intro > span{
+    color: #455F90;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #455F90;
-}
-
-
-
-.navbar{
+.text-about-me{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 50%;
-    font-weight: bold;
-    transition: 0.4s ease;
+    flex-direction: column;
+    width: 50vw;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 1rem;
 }
 
-.navbar .logo-sugor:hover{
-    cursor: default;
-}
-
-.menu-btn button:hover{
-    background-color: #455F90;
-    color: white;
-    box-shadow: 0px 0px 4px 2px #455F90; 
-}
-
-.main-menu > .navbar-toggler{
+.text-about-me > button{
+    margin-top: 120px;
+    background-color: rgba(30, 30, 30, 0);
     border: 0px;
 }
 
-.main-menu-dropdown a{
+.text-about-me > button > a{
     text-decoration: none;
-    color: white;
-    transition: 0.5s ease;
-}
-
-.main-menu-dropdown a:hover{
-    color: #455F90;
-    padding-left: 10px;   
-    padding-right: 10px;   
-}
-
-
-.socmed-links a{
-    text-decoration: none;
-    padding: 5px;
-}
-
-.socmed-links a:hover i{
-    color: #455F90;
-}
-
-main{
-    background-image: url(images/image.png);
-    background-size: 75%;
-    background-position: 40px;
-    background-position-y: 120px;
-    background-repeat: no-repeat;
-}
-
-.intro-name, .intro-name span{
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-.intro-name span{
-    color: #455F90;
-}
-
-
-.intro-text{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.intro-desc{
-    font-family: 'Assistant';
-    font-weight: 300;
-}
-
-.about-me-section, .my-skills-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 60px;
-    margin-top: 12em;
-    margin-bottom: 12em;
-}
-
-.section-title{
-    font-family: 'Oswald', sans-serif;
-    font-weight: bolder;
-    font-size: x-large;
-}
-
-.about-me-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.about-me-name{
-    font-family: 'Oswald', sans-serif;
-    font-weight: bolder;
-    font-size: large;
-    margin-bottom: 20px;
-}
-
-.about-me-name span{
-    font-family: 'Oswald', sans-serif;
-    font-weight: bolder;
-    font-size: large;
-    color: #455F90;
-}
-
-.about-me-desc{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    width: 60%;
-}
-
-.resume-button{
-    margin-top: 40px;
-    padding: 15px;
-}
-
-.resume-button button{
-    text-decoration: none;
-    background-color: #00000000;
-    border: 0px;
-}
-
-.resume-button button a{
-    padding: 15px;
+    font-size: 1rem;
+    padding: 0.8em;
     border: 2px solid #455F90;
     border-radius: 50px;
-    background-color: #00000000;
-    color: #455F90;
-    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
     transition: 0.3s ease;
 }
 
-.resume-button button:hover a{
-    background-color: #455F90;
-    color: white;
-    padding-left: 60px;
-    padding-right: 60px;
+.text-about-me > button > a:hover{
+    background-color: #455f90;
+    border: 2px solid #455F90;
+    padding-left: 3.8em;
+    padding-right: 3.8em;
 }
 
-.skill-title{
-    font-family: 'Montserrat', sans-serif;
-    font-size: larger;
+.text-about-me > button > a{
+    text-decoration: none;
+}
+
+.about-me-image img{
+    object-fit: cover;
+    width: 260px;
+    height: 500px;
+    border-radius: 0px 190px 0px 140px;
+    box-shadow: rgba(69, 95, 170, 0.4) -5px 5px, rgba(69, 95, 144, 0.3) -10px 10px, rgba(69, 95, 144, 0.2) -15px 15px, rgba(69, 95, 144, 0.1) -20px 20px, rgba(69, 95, 144, 0.05) -25px 25px;
+}
+
+/*== SKILLS ==*/
+#skills-section{
+    flex-direction: column;
+}
+
+.skill-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 5vh;
+}
+
+.skill-list .skill-page > .page-title{
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.skill-icons{
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+    flex-wrap: wrap;
+    gap: 2em;
 }
 
 .skill-icons button{
-    margin-top: 15px;
-    margin: 18px;
-    border: 2px solid #ffffff;
-    border-radius: 100%;
-    background-color: white;
-    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
 }
 
-.skill-icons button:hover{
+.skill-icons a{
+    background-color: white;
+    border: 2px solid #00000000;
+    border-radius: 100%;
+    padding: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.skill-icons a:hover{
     border: 2px solid #455F90;
     box-shadow: 0px 0px 8px 4px #455F90;
 }
 
 .skill-icons svg{
-    width: 32px;
-    height: 32px;
-    padding: 2px;
+    width: 36px;
+    height: 36px;
     margin: 12px;
 }
 
+/*== WORKS ==*/
+#works-section{
+    flex-direction: column;
+}
 
-.projects-section{
+.work-list{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     flex-direction: column;
-    margin-top: 12em;
-    margin-bottom: 12em;
+    gap: 15vh;
+}
+
+.work-page{
+    text-align: center;
 }
 
 
-.projects-list{
+.work-title{
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.project-list{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
 }
 
-.projects-rect{
-    width: 240px;
-    height: 240px;
-    margin: 0.1rem;
-    text-decoration: none;
-    color: white;
+.project-page{
+    height: 180px;
 }
 
-.projects-rect img{
-    width: 240px;
-    height: 240px;
-}
-
-.projects-rect::before{
+.project-page::before{
     content: 'See Project';
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.8);
     transition: 0.3s ease;
@@ -263,233 +297,142 @@ main{
     font-family: 'Montserrat', sans-serif;
 }
 
-.projects-rect:hover::before{
+.project-page:hover::before{
     opacity: 1;
 }
 
-.contact-section{
+/*== CONTACTS ==*/
+#contact-section{
+    flex-direction: column;
+}
+
+#contact-section > p{
+    margin-bottom: 4rem;
+    color: #455F90;
+}
+
+#contact-form{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     flex-direction: column;
-    gap: 130px;
-    margin-top: 12em;
-    margin-bottom: 12em;
+    gap: 4px;
+    color: white;
+    padding: 0.75rem;
 }
 
-.contact-desc{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#contact-form > input, #contact-form > textarea{
+    background-color: #3e3e3e;
+    padding: 12px;
+    width: 100%;
+    border: 0px;
 }
 
-.contact-desc > p{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 48px;
+#contact-form > input:focus, #contact-form > textarea:focus{
+    outline: none;
 }
 
-.contact-desc button{
+#contact-form > button{
+    cursor: pointer;
+    margin-top: 2rem;
+    background-color: #00000000;
+    padding: 1em;
+    border: 2px solid #455F90;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+#contact-form > button:hover{
+    background-color: #455F90;
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+/*=======================================================================*/
+.go-up{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: #00000000;
-    border: 0px;
-    margin-top: 120px;
-    transition: 0.5s ease;
+    width: 100%;
 }
 
-.contact-desc button a{
-    padding: 15px;
-    border: 2px solid #455F90;
-    border-radius: 50px;
-    background-color: #00000000;
-    color: #455F90;
+.go-up a{
+    position: relative;
+    top: -40px;
+    font-size: 32px;
+    transition: 0.3s ease;
+}
+
+.go-up a i{
+    transition: 0.5s ease;
+
+}
+
+.go-up a:hover i{
+    color: #455F90
+}
+
+
+/*=======================================================================*/
+/*Footer*/
+footer{
+    background-color: #455F90;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.4em;
+}
+
+.socmed-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75em;
+}
+
+.socmed-links a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 100%;
     text-decoration: none;
     transition: 0.3s ease;
 }
 
-.contact-desc button:hover a{
-    background-color: #455F90;
-    color: white;
+.socmed-links a:hover{
+    border: 1px solid white;
 }
 
 
-.go-back-up{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
+/*================================================================================================================================================================================*/
+/*================================================================================================================================================================================*/
 
-.go-back-up > button{
-    text-decoration: none;
-    background-color: #00000000;
-    border: 0px;
-    color: #455F90;
-}
-
-.go-back-up > button > a{
-    text-decoration: none;
-    background-color: #00000000;
-    color: #455F90;
-    padding: 10px;
-    border: 2px solid #455F90;
-    border-radius: 50px;
-    transition: 0.2s ease-in;
-}
-
-.go-back-up > button > a > i{
-    color: #455F90;
-}
-
-.go-back-up > button:hover > a{
-    background-color: #455F90;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.go-back-up > button:hover > a > i{
-    color: white;
-}
-
-@media screen and (max-width: 768px) {
-    .navbar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/* MAX WIDTH 540px*/
+@media screen and (max-width: 539px) {
+    #about-me-section{
+        flex-direction: column-reverse;
+    }
+    #name-intro{
+        font-size: 1rem;
+    }
+    .text-about-me{
+        font-size: 14px;
     }
 
-    .navbar .logo-sugor{
-        font-size: x-large;
-    }
-
-    .main-menu-dropdown{
-        display: none;
-    }
-
-    .menu-btn button{
-        display: none;
-    }
-
-    .intro-section{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        font-size: medium;
-        transition: 0.4s ease;
-    }
-    
-    .intro-text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s ease;
-    }
-
-    .intro-image{
-        text-align: center;
-    }
-
-    .intro-image img{
-        width: 160px;
-        height: 160px;
+    .about-me-image img{
+        width: 180px;
+        height: 180px;
         border-radius: 100%;
-    }
+        box-shadow: none;
 
-    .about-me-desc{
-        font-size: small;
-        width: 25vh;
-    }
-}
-
-
-@media screen and (min-width: 769px) {
-    .navbar .logo-sugor{
-        font-size: xx-large;
-        font-weight: 700;
-        transition: 0.4s ease;
-    }
-
-    
-    .main-menu-dropdown{
-        display: flex;
-        padding: 0;
-        gap: 15px;
-        list-style-type: none;
-        transition: 0.32s ease;
-    }
-
-    .menu-btn button{
-        font-size: medium;
-        padding: 8px;
-        background-color: #1E1E1E;
-        color: #455F90;
-        border: 2px solid #455F90;
-        border-radius: 25px;
-        transition: 0.4s ease;
-    }
-
-    .intro-section{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: medium;
-        transition: 0.4s ease;
-        margin-top: 0.5rem;
-    }
-
-    .intro-desc{
-        width: 390px;
-    }
-
-    .intro-image img{
-        width: 200px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 105px 180px 105px 200px;
-    }
-
-    .intro-image img{
-        animation-name: image-hover-anim;
-        animation-duration: 30s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    .intro-image img:hover{
-        animation-play-state: paused;
-    }
-
-    .contact-desc button:hover a{
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-}
-
-@keyframes image-hover-anim{
-    0%{
-        border-radius: 105px 180px 105px 200px;
-        box-shadow: 3px 0px 12px 2px #455f903c; 
-    }
-    25%{
-        border-radius: 145px 90px 185px 145px;
-        box-shadow: 3px 2px 12px 2px #455f903c; 
-    }
-    50%{
-        border-radius: 105px 135px 125px 67px;
-        box-shadow: 1px 4px 12px 2px #455f903c; 
-    }
-    75%{
-        border-radius: 215px 65px 195px 185px;
-        box-shadow: -3px 2px 12px 2px #455f903c; 
-    }
-    100%{
-        border-radius: 105px 180px 105px 200px;
-        box-shadow: 3px 0px 12px 2px #455f903c; 
     }
 }
