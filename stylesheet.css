@@ -120,6 +120,8 @@ header > nav > ul > li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
     background-color: #1E1E1E;
@@ -357,6 +359,7 @@ header > nav > ul > li a:hover{
     align-items: center;
     text-decoration: none;
     width: 100%;
+    height: 0;
 }
 
 .go-up a{
@@ -368,7 +371,6 @@ header > nav > ul > li a:hover{
 
 .go-up a i{
     transition: 0.5s ease;
-
 }
 
 .go-up a:hover i{
