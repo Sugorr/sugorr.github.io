@@ -12,6 +12,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    background-color: #1E1E1E;
+}
  
 /*=======================================================================*/
 /*Intro Section*/
@@ -124,7 +127,6 @@ header > nav > ul > li a:hover{
     padding-right: 5vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-color: #1E1E1E;
 }
 
 .sect-title{
