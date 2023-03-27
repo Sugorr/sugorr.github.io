@@ -13,6 +13,8 @@ function closeResume(){
     window.history.go(-1);
 }
 
-window.addEventListener('popstate', function() {
+window.addEventListener('popstate', function(e) {
+    if (e.state){
         closeResume();
+    }
 });
