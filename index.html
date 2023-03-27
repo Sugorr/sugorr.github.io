@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./stylesheet.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
@@ -50,7 +51,81 @@
                     business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one
                     design problem at a time.
                     </p>
-                    <button data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"><a href="./pages/resume/contact-index.html">RESUME</a></button>
+                    <button data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true"><a onclick="openResume()">RESUME</a></button>
+                </div>
+
+                <div id="resume" class="resume-section hidden">
+                    <div class="header-resume">
+                        <div class="header-name">
+                            <div class="name-hdr">
+                                Joaquin "<span>Sugor</span>" Reynera
+                            </div>
+                            <div class="job-hdr">
+                                Indie Game Developer, Web Developer
+                            </div>
+                        </div>
+        
+                        <div class="header-image">
+                            <img src="./images/profile.png" alt="profile.png">
+                        </div>
+                        
+                    </div>
+        
+                    <div class="resume-body">
+                        <div class="resume-col-1">
+                            <div class="resume-col-1-row-1">
+                                <div>
+                                    <p><i class="material-icons">assignment</i>Joaquin Reynera (Facebook)</p>
+                                </div>
+                                <div>
+                                    <p><i class="material-icons">call</i>0906 577 3679</p>
+                                </div>
+                                <div>
+                                    <p><i class="material-icons">business_center</i>critizize.joaquin@gmail.com</p>
+                                </div>
+                                <div>
+                                    <p><i class="material-icons">create</i>Santa Rosa City, Laguna</p>
+                                </div>
+                            </div>
+        
+                            <div class="resume-col-1-row-2">
+                                <p class="type-title">SKILLS</p>
+                                <ul>
+                                    <li>Computer Literacy</li>
+                                    <li>Web Design</li>
+                                    <li>Front End Coding</li>
+                                    <li>Problem Solving</li>
+                                    <li>Project Management Tools</li>
+                                </ul>
+                            </div>
+                            <div class="resume-col-1-row-3">
+                                <p class="type-title">EDUCATIONS</p>
+                                <div class="educ-bg">
+                                    <p class="educ-title">ELEMENTARY SCHOOL</p>
+                                    <p class="educ-desc">Pacita Complex 2 Elementary School</p>
+                                    <p class="educ-desc">2009-2016</p>
+                                </div>
+                                <div class="educ-bg">
+                                    <p class="educ-title">SECONDARY HIGHSCHOOL</p>
+                                    <p class="educ-desc">Pacita Complex National Highschool</p>
+                                    <p class="educ-desc">2016-2020</p>
+                                </div>
+                                <div class="educ-bg">
+                                    <p class="educ-title">SENIOR HIGHSCHOOL</p>
+                                    <p class="educ-desc">STI College Santa Rosa</p>
+                                    <p class="educ-desc">2020-2022</p>
+                                </div>
+                                <div class="educ-bg">
+                                    <p class="educ-title">FULL STACK DEVELOPMENT</p>
+                                    <p class="educ-desc">KodeGo Bootcamp</p>
+                                    <p class="educ-desc">2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="back-button" onclick="closeResume()">BACK</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="about-me-image" data-aos="zoom-in" data-aos-delay="500" data-aos-once="true"><img src="./images/profile.png" alt="profile.png"></div>
@@ -187,6 +262,9 @@
             </section>
         </main>
 
+
+
+
        <div class="go-up">
             <a href="#">
                 <i class="fa-sharp fa-solid fa-angles-up"></i>
@@ -216,8 +294,6 @@
         
         <!--===== SCRIPT =====-->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+        <script src="./script.js"></script>
     </body>
 </html>

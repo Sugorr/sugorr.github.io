@@ -417,6 +417,109 @@ footer{
 }
 
 
+
+.resume-section{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #455f90fb;
+    height: 75vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    z-index: 2;
+}
+
+.header-resume{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap-reverse;
+    gap: 128px;
+}
+
+.header-name{
+    text-align: center;
+}
+
+.name-hdr{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.job-hdr{
+    font-size: 14px;
+}
+
+
+.header-image img{
+    width: 128px;
+    border-radius: 100%;
+}
+
+.resume-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resume-col-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.resume-col-1-row-1{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.resume-col-1-row-2{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.resume-col-1-row-3{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.type-title{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.educ-title{
+    font-size: 18px;
+}
+
+.educ-desc{
+    font-size: 12px;
+}
+
+.back-button{
+    margin-top: 3rem;
+    padding: 0.5rem;
+    background-color: #00000000;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.back-button:hover{
+    color: #455F90;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
 /*================================================================================================================================================================================*/
 /*================================================================================================================================================================================*/
 
