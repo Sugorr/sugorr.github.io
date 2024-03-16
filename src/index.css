@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 
-html {
+html, .root {
   scroll-behavior: smooth;
 }
 

@@ -3,11 +3,8 @@ import { useEffect, useRef } from "react";
 
 export default function GameProjects () {
     
-
-
-
     return (
-        <div className="flex justify-center items-center flex-col mb-48 bg-default-white/5 rounded-3xl">
+        <div className="flex justify-center items-center flex-col mb-48 ">
             <GameCardsCarousel />
         </div>
     );

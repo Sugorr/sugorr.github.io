@@ -1,50 +1,22 @@
-import { useInView, motion, easeIn } from "framer-motion";
+import { useInView, motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 
 const containerVariants = {
     hidden: {
         opacity: 0,
         y: 40,
+        y: 0,
     },
     show: {
         opacity: 1,
-        y: 0,
         transition: {
             duration: 0.5,
             staggerChildren: 0.35,
-            ease: "easeOut",
         }
     }
 }
 
-const textVariants = {
-    hidden: {
-        opacity: 0,
-        y: 50,
-    },
-    show: {
-        opacity: 1,
-        y: 0,
-    }
-}
-
-const containerTextVariants = {
-    hidden: {
-        opacity: 0,
-        y: 50,
-    },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.8,
-            staggerChildren: 0.55,
-            ease: "easeOut",
-        }
-    }
-}
-
-const textLargeVariants = {
+const textContainerVariants = {
     hidden: {
         opacity: 0,
         y: 40,
@@ -52,6 +24,33 @@ const textLargeVariants = {
     show: {
         opacity: 1,
         y: 0,
+    }
+}
+
+const containerSloganVariants = {
+    hidden: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.3,
+            staggerChildren: 0.55,
+        }
+    }
+}
+
+const textSloganVariants = {
+    hidden: {
+        opacity: 0,
+        y: 40,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        
     }
 }
 
@@ -68,21 +67,22 @@ export default function LargeTexts() {
     return (
         <>
             <motion.div
-            ref={textRef} variants={containerTextVariants} initial="hidden" animate={textInView ? "show" : "hidden"}
-            className="flex flex-col justify-center items-center py-48 text-[5dvh] text-center font-bold">
-                <motion.p variants={textLargeVariants}>Mastery comes from <span className="text-default-orange">learning</span> one </motion.p>
-                <motion.p variants={textLargeVariants}>lesson at a time and <span className="text-default-orange">developing</span> </motion.p>
-                <motion.p variants={textLargeVariants}>expertise.</motion.p>
+            ref={textRef} variants={containerSloganVariants} initial="hidden" animate={textInView ? "show" : "hidden"}
+            className="flex flex-col justify-center items-center py-32 text-[5dvh] text-center font-bold">
+                <motion.p variants={textSloganVariants}>Mastery comes from <span className="text-default-orange">learning</span> one </motion.p>
+                <motion.p variants={textSloganVariants}>lesson at a time and <span className="text-default-orange">developing</span> </motion.p>
+                <motion.p variants={textSloganVariants}>expertise.</motion.p>
             </motion.div>
 
-            <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col justify-center items-center">
                 <motion.ul
                     ref={firstList} variants={containerVariants} initial="hidden" animate={firstListInView ? "show" : "hidden"}
-                    className="group h-full  w-full my-32 font-extrabold tracking-wide text-[5dvw]">
+                    className="group h-full w-full my-32 font-extrabold tracking-wide text-[5dvw]">
                     {FirstTextList.map((item, index) => (
                         <ListedItem key={index} text={item.text} />
                     ))}
                 </motion.ul>
+                
                 <motion.ul
                     ref={secondList} variants={containerVariants} initial="hidden" animate={secondListInView ? "show" : "hidden"}
                     className="group h-full w-full my-32 font-extrabold text-right tracking-wide text-[5dvw]">
@@ -94,6 +94,7 @@ export default function LargeTexts() {
         </>
     );
 }
+
 
 const ListedItem = ({ text, index }) => {
     const [hoveredItem, setHoveredItem] = useState();
@@ -107,25 +108,38 @@ const ListedItem = ({ text, index }) => {
     }
 
     return (
-        <motion.li
-            variants={textVariants} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`relative px-12 overflow-hidden transition-all duration-500 filter ${hoveredItem ? "" : "group-hover:blur-md"}`}>
-            <div className="">
-                {text}
-            </div>
-            {hoveredItem ?
-                <motion.div
-                initial={{
-                    scaleY: 0,
-                    originY: 1,
-                }}
-                animate={{
-                    scaleY: 1,
-                    }
-                }
-                className="absolute bottom-0 left-0 w-full h-full px-12 bg-default-orange text-default-black">{text}</motion.div>
-                : <></>
-                }
-        </motion.li>
+            <motion.li
+                variants={textContainerVariants}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                className={`relative px-12 py-2 overflow-hidden transition-all duration-300 filter bg-clip-content ${hoveredItem ? "text-default-black" : "group-hover:blur-md"}`}>
+                    {text}
+                <AnimatePresence>
+                    { hoveredItem && ( 
+                        <motion.div
+                            initial={{
+                                scaleY: 0,
+                                originY: 0.5,
+                            }}
+                            animate={{
+                                scaleY: 1,
+                                transition: {
+                                    duration: 0.2,
+                                    ease: "easeIn"
+                                }
+                            }}
+                            exit={{
+                                scaleY: 0,
+                                transition: {
+                                    duration: 0.3,
+                                    ease: "easeOut"
+                                }
+                            }}
+                            className="absolute top-0 left-0 -z-10 w-full h-full px-12 py-2 bg-default-orange text-default-black">
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </motion.li>
     );
 }
 
