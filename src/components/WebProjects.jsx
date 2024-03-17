@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion"
 
 export default function WebProjects () { 
     const targetRef = useRef();
-    const isInView = useInView(targetRef, {margin: "0px 0px 750px 0px", once: true});
+    const isInView = useInView(targetRef, {margin: "0px 0px -50px 0px", once: true});
 
     return (
         <div className="relative flex justify-center items-center flex-col gap-24 mb-72">
@@ -97,14 +97,14 @@ const Websites = (prop) => {
                 hidden: { opacity: 0, y: 250, },
                 show: { opacity: 1, y: 0,  }
             }}
-            className="group relative w-[420px] h-[380px]"
+            className="group relative w-[25dvw] h-[35dvh]"
             >   
                 <motion.div
                 style={{
                     transform: "translateZ(125px)",
                     transformStyle: "preserve-3d",
                 }}
-                className="transition-all z-50 duration-500 p-6 w-full h-full hover:cursor-pointer flex justify-start items-left flex-col bg-default-black rounded-xl">
+                className="transition-all z-50 duration-500 p-6 w-full h-full flex justify-start items-left flex-col bg-default-black rounded-xl">
                     <motion.h4
                     style={{
                         transform: "translateZ(50px)"

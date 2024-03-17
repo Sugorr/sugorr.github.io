@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 export default function GameProjects () {
     
     return (
-        <div className="flex justify-center items-center flex-col mb-48 ">
+        <div className="flex justify-center items-center flex-col mb-48">
             <GameCardsCarousel />
         </div>
     );
@@ -21,7 +21,7 @@ const GameCardsCarousel = () => {
 
     
     const ref = useRef();
-    const isInView = useInView(ref);
+    const isInView = useInView(ref, {margin: "0px 0px -120px 0px"});
 
     return (
         <div ref={targetRef} className="relative h-[300vh] flex justify-center items-start bg-transparent">
@@ -37,7 +37,9 @@ const GameCardsCarousel = () => {
                             animate={{
                                 opacity: isInView ? 1 : 0,
                                 y: isInView ? 0 : 50,
-                                transition: "all 2.3s ease 0.5s"
+                                transition: {
+                                    duration: 0.5,
+                                }
                             }}
                             className="text-7xl font-bold"
                             >
@@ -48,7 +50,9 @@ const GameCardsCarousel = () => {
                             animate={{
                                 opacity: isInView ? 1 : 0,
                                 x: isInView ? 0 : 50,
-                                transition: "all 5.3s ease 0.5s"
+                                transition: {
+                                    duration: 0.5,
+                                }
                             }}
                             className="font-quicksand text-4xl py-24 text-default-white/50">Building <span className="font-quicksand font-bold text-default-orange"
                             >

@@ -22,16 +22,16 @@ export default function Navbar () {
             className='py-12 top-[-100%] visible flex justify-center items-start'>
                 <div className='group bg-gradient-to-r from-default-blue to-default-orange rounded-full p-0.5 relative'>
                     <ul id='navbar' className='bg-default-black shadow-default-shadow shadow-default-orange/15 py-3 md:px-10 px-5 md:text-lg text-md rounded-full flex justify-between items-center md:gap-16 gap-8'>
-                        <li className='transition-all duration-700 hover:cursor-pointer hover:px-6 hover:text-default-orange'>
+                        <li className='transition-all duration-700 hover:px-6 hover:text-default-orange'>
                         Home
                         </li>
-                        <li className='transition-all duration-700 hover:cursor-pointer hover:px-6 hover:text-default-orange'>
+                        <li className='transition-all duration-700 hover:px-6 hover:text-default-orange'>
                         Works
                         </li>
-                        <li className='transition-all duration-700 hover:cursor-pointer hover:px-6 hover:text-default-orange'>
+                        <li className='transition-all duration-700 hover:px-6 hover:text-default-orange'>
                         Skills
                         </li>
-                        <li className='transition-all duration-700 hover:cursor-pointer hover:px-6 hover:text-default-orange'>
+                        <li className='transition-all duration-700 hover:px-6 hover:text-default-orange'>
                         Contacts
                         </li>
                     </ul>

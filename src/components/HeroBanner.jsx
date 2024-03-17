@@ -16,7 +16,6 @@ export default function HeroBanner (){
     const textRightX = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"])
     const textUp = useTransform(scrollYProgress, [1, 0], [0, -520])
     const opacityScroll = useTransform(scrollYProgress, [1, 0], ["100%", "0%"])
-    const enlargeScroll = useTransform(scrollYProgress, [1, 0], ["100%", "500%"])
 
     const words = [
         {
@@ -39,8 +38,40 @@ export default function HeroBanner (){
             
             <div className="relative">
                 <>
-                    <div className="w-[420px] h-[420px] bg-default-blue/20 top-32 -left-32 absolute rounded-full blur-max -z-10"></div>
-                    <div className="w-[420px] h-[420px] bg-default-orange/20 -top-32 left-32  absolute rounded-full blur-max -z-10"></div>
+                    <motion.div
+                    initial={{
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                    }}
+                    animate={{
+                        x: -60,
+                        y: -100,
+                        scale: 1.3,
+                        transition: {
+                            duration: 15,
+                            repeat: Infinity,
+                            repeatType: "mirror",
+                        }
+                    }}
+                    className="w-[420px] h-[420px] bg-default-blue/20 top-32 -left-32 absolute rounded-full blur-max -z-10"></motion.div>
+                    <motion.div
+                    initial={{
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                    }}
+                    animate={{
+                        x: 360,
+                        y: -60,
+                        scale: 1.5,
+                        transition: {
+                            duration: 15,
+                            repeat: Infinity,
+                            repeatType: "mirror",
+                        }
+                    }}
+                    className="w-[420px] h-[420px] bg-default-orange/20 -top-32 left-32  absolute rounded-full blur-max -z-10"></motion.div>
                 </>
                 <motion.div
                     style={{ translateX: textLeftX, translateY: textUp }}

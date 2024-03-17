@@ -5,10 +5,10 @@ const containerVariants = {
     hidden: {
         opacity: 0,
         y: 40,
-        y: 0,
     },
     show: {
         opacity: 1,
+        y: 0,
         transition: {
             duration: 0.5,
             staggerChildren: 0.35,
@@ -56,13 +56,13 @@ const textSloganVariants = {
 
 export default function LargeTexts() {
     const textRef = useRef(null);
-    const textInView = useInView(textRef)
+    const textInView = useInView(textRef, {margin: "0px 0px -220px 0px"})
 
     const firstList = useRef(null);
-    const firstListInView = useInView(firstList);
+    const firstListInView = useInView(firstList, {margin: "0px 0px -180px 0px", once: true});
 
     const secondList = useRef(null);
-    const secondListInView = useInView(secondList);
+    const secondListInView = useInView(secondList, {margin: "0px 0px -180px 0px", once: true});
 
     return (
         <>
