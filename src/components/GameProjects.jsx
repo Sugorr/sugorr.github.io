@@ -54,7 +54,7 @@ const GameCardsCarousel = () => {
                                     duration: 0.5,
                                 }
                             }}
-                            className="font-quicksand text-4xl py-24 text-default-white/50">Building <span className="font-quicksand font-bold text-default-orange"
+                            className="text-4xl py-24 text-default-white/50">Building <span className="font-quicksand font-bold text-default-orange"
                             >
                                 games</span>, fueled<br></br> by fun and creativity!</motion.p>
                         <button className="bg-default-orange py-2 px-6 rounded-xl text-xl tracking-wide">Contact</button>

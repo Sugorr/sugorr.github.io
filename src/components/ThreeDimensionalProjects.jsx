@@ -12,7 +12,7 @@ export default function ThreeDimensionalProjects () {
                 <div className="w-[420px] h-[420px] bg-default-orange/20 bottom-48 left-32  absolute rounded-full blur-max -z-10"></div>
                 <div className="w-[420px] h-[420px] bg-default-orange/20 -right-32  absolute rounded-full blur-max -z-10"></div>
                 <div className="w-[420px] h-[420px] bg-default-blue/20 top-[32rem] right-32  absolute rounded-full blur-max -z-10"></div>
-                <p className="font-quicksand lg:text-5xl">Sculpting worlds, molding joy, in<br/><span className="font-quicksand font-bold text-default-orange">three-dimensional</span>,delight.</p>
+                <p className=" lg:text-5xl">Sculpting worlds, molding joy, in<br/><span className=" font-bold text-default-orange">three-dimensional</span>,delight.</p>
             </div>
 
             <motion.div

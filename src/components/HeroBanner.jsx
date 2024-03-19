@@ -1,7 +1,7 @@
 
 import { useRef } from "react";
 import { TypewriterEffect } from "./ui/typewriter-effect"
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import Navbar from "./Navbar";
 
 export default function HeroBanner (){
@@ -11,7 +11,8 @@ export default function HeroBanner (){
         offset: ["end start", "start start"],
     });
 
-    const textLeftX = useTransform(scrollYProgress, [0, 1], ["500%", "0%"])
+    const textLeftX = useTransform(scrollYProgress, [0, 1], ["400%", "0%"]);
+
     const textLeftDelayX = useTransform(scrollYProgress, [0, 1], ["140%", "0%"])
     const textRightX = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"])
     const textUp = useTransform(scrollYProgress, [1, 0], [0, -520])
@@ -33,9 +34,7 @@ export default function HeroBanner (){
     ];
 
     return (
-        <div ref={ targetRef } className='md:px-20 px-10 h-dvh text-center flex justify-center items-center flex-col md:gap-32 gap-16'>
-            <Navbar />
-            
+        <div ref={ targetRef } className='md:px-20 px-10 h-dvh text-center flex justify-center items-center flex-col md:gap-32 gap-16'>            
             <div className="relative">
                 <>
                     <motion.div
@@ -84,7 +83,7 @@ export default function HeroBanner (){
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
                 transition={{ duration: 1, ease: 'easeOut', type: 'tween', delay: 1.5}}
-                className='font-karla font-bold text-[10vh] md:py-6 py-2 text-transparent bg-clip-text bg-gradient-to-r from-default-blue to-default-orange'>
+                className='font-bold text-[10vh] md:py-6 py-2 text-transparent bg-clip-text bg-gradient-to-r from-default-blue to-default-orange'>
                     Creative Frontend & Game
                 </motion.p>
                 
@@ -93,7 +92,7 @@ export default function HeroBanner (){
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
                 transition={{ duration: 2.5 }}
-                className='font-quicksand font-bold text-[10dvh]'>
+                className='font-bold text-[10dvh]'>
                     Developer
                 </motion.div>
             </div>

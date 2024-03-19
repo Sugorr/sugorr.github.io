@@ -12,7 +12,7 @@ export default function WebProjects () {
                 <div className="w-[420px] h-[420px] bg-default-orange/20 bottom-48 left-32  absolute rounded-full blur-max -z-10"></div>
             </>
             <div className="flex self-start items-center py-12 px-64 gap-32">
-                <p className="font-quicksand text-5xl">Creating <span className="font-quicksand font-bold text-default-orange">websites</span>,<br></br>weaving joy into every click.</p>
+                <p className=" text-5xl">Creating <span className="font-bold text-default-orange">websites</span>,<br></br>weaving joy into every click.</p>
             </div>
 
             <motion.div
@@ -116,7 +116,7 @@ const Websites = (prop) => {
                     style={{
                         transform: "translateZ(50px)"
                     }}
-                    className="w-full h-full font-quicksand bg-default-white/10 px-5 py-3 rounded-lg"
+                    className="w-full h-full bg-default-white/10 px-5 py-3 rounded-lg"
                     >
                         {prop.desc}</motion.p>
                     <div
