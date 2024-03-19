@@ -8,7 +8,7 @@ export default function Navbar () {
             initial={{ opacity: 0, y: -50}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.5, type: 'spring', damping: 20, delay: 2}}
-            className='sticky top-0 py-12 flex justify-center items-start z-50'>
+            className='top-0 py-12 flex justify-center items-start z-50'>
                 <div className='group bg-gradient-to-r from-default-blue to-default-orange rounded-full p-0.5 relative'>
                     <ul id='navbar' className='bg-default-black py-3 md:px-10 px-5 md:text-lg text-md rounded-full flex justify-between items-center md:gap-16 gap-8'>
                         <li className='transition-all duration-700 hover:px-6 hover:text-default-orange'>

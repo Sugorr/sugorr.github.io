@@ -31,7 +31,11 @@ export default {
           'web-5': "url('/src/assets/objects/garden_2.png')",
           'web-6': "url('/src/assets/objects/shelter_1.png')",
           'web-7': "url('/src/assets/objects/human.png')",
-          'web-8': "url('/src/assets/objects/kubo.png')",
+          'web-8': "url('/src/assets/objects/Mushroom.png')",
+          'web-9': "url('/src/assets/objects/Lethal-focused.png')",
+          'web-10': "url('/src/assets/objects/kubo.png')",
+          'web-11': "url('/src/assets/objects/Chibi-Rovic-1.png')",
+          'web-12': "url('/src/assets/objects/Chibi-Jea-1.png')",
 
           'game-1': "url('/src/assets/games/birdio.png')",
           'game-2': "url('/src/assets/games/knock.png')",
