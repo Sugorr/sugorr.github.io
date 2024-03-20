@@ -1,8 +1,6 @@
 
 import { useRef } from "react";
-import { TypewriterEffect } from "./ui/typewriter-effect"
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import Navbar from "./Navbar";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function HeroBanner (){
     const targetRef = useRef(null);
@@ -20,79 +18,53 @@ export default function HeroBanner (){
 
     const words = [
         {
-          text: "I'm",
+          text: "Creative",
           className: "font-quicksand font-bold text-[10dvh]",
         },
         {
-          text: "Joaquin",
+          text: "Frontend",
           className: "font-quicksand font-bold text-[10dvh]",
         },
         {
-          text: "Reynera",
+          text: "&",
+          className: "font-quicksand font-bold text-[10dvh]",
+        },
+        {
+          text: "Game",
           className: "font-quicksand font-bold text-[10dvh]",
         },
     ];
 
     return (
-        <div ref={ targetRef } className='md:px-20 px-10 h-dvh text-center flex justify-center items-center flex-col md:gap-32 gap-16'>            
-            <div className="relative">
-                <>
-                    <motion.div
-                    initial={{
-                        x: 0,
-                        y: 0,
-                        scale: 1,
-                    }}
-                    animate={{
-                        x: -60,
-                        y: -100,
-                        scale: 1.3,
-                        transition: {
-                            duration: 15,
-                            repeat: Infinity,
-                            repeatType: "mirror",
-                        }
-                    }}
-                    className="w-[420px] h-[420px] bg-default-blue/20 top-32 -left-32 absolute rounded-full blur-max -z-10"></motion.div>
-                    <motion.div
-                    initial={{
-                        x: 0,
-                        y: 0,
-                        scale: 1,
-                    }}
-                    animate={{
-                        x: 360,
-                        y: -60,
-                        scale: 1.5,
-                        transition: {
-                            duration: 15,
-                            repeat: Infinity,
-                            repeatType: "mirror",
-                        }
-                    }}
-                    className="w-[420px] h-[420px] bg-default-orange/20 -top-32 left-32  absolute rounded-full blur-max -z-10"></motion.div>
-                </>
+        <div ref={ targetRef } className='relative md:px-64 px-10 py-24 h-dvh flex justify-around items-center flex-col md:gap-32 gap-16'> 
+            <div className="relative overflow-hidden self-start text-left">
                 <motion.div
                     style={{ translateX: textLeftX, translateY: textUp }}
-                    >
-                    <TypewriterEffect words={ words }/>
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{ duration: 2.5 }}
+                    className='font-bold text-[5dvh]'
+                >
+                    I'm Joaquin Reynera,
                 </motion.div>
 
                 <motion.p 
-                style={{ translateX: textRightX, translateY: textUp }}
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
-                transition={{ duration: 1, ease: 'easeOut', type: 'tween', delay: 1.5}}
-                className='font-bold text-[10vh] md:py-6 py-2 text-transparent bg-clip-text bg-gradient-to-r from-default-blue to-default-orange'>
+                    style={{ translateX: textRightX, translateY: textUp }}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{ duration: 0.5, ease: 'easeInOut', delay: 1}}
+                    className='font-bold text-[5dvh]'
+                >
                     Creative Frontend & Game
                 </motion.p>
                 
                 <motion.div
-                style={{ translateX: textLeftDelayX, translateY: textUp }}
-                initial={{ opacity: 0}}
-                animate={{ opacity: 1}}
-                transition={{ duration: 2.5 }}
-                className='font-bold text-[10dvh]'>
+                    style={{ translateX: textLeftDelayX, translateY: textUp }}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{ duration: 2.5 }}
+                    className='font-bold text-default-orange text-[5dvh]'
+                >
                     Developer
                 </motion.div>
             </div>
@@ -101,7 +73,7 @@ export default function HeroBanner (){
             initial={{ opacity: 0, y: 15}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 1}}
-            className='md:text-2xl text-lg font-regular text-default-white/50 w-1/2'>
+            className='md:text-2xl text-xl self-end text-right font-regular text-default-black w-1/2'>
                 I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.
             </motion.p>
         </div>

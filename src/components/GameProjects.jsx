@@ -1,5 +1,5 @@
-import { motion, useTransform, useScroll, useSpring, useInView, spring } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { motion, useTransform, useScroll, useSpring, useInView, spring } from "framer-motion";
 
 export default function GameProjects () {
     
@@ -15,7 +15,12 @@ const GameCardsCarousel = () => {
     const { scrollYProgress } = useScroll({
         target: targetRef,
     });
-    const scaleX = useSpring(scrollYProgress, { stiffness: 900, damping: 240, });
+    
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     const x = useTransform(scaleX, [0, 1], ["35%", "-40%"]);
 
@@ -24,13 +29,10 @@ const GameCardsCarousel = () => {
     const isInView = useInView(ref, {margin: "0px 0px -120px 0px"});
 
     return (
-        <div ref={targetRef} className="relative h-[300vh] flex justify-center items-start bg-transparent">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-12">
+        <div ref={targetRef} className="relative h-[300vh] flex justify-center items-start">
+            <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-default-orange/10 rounded-lg">
+                <motion.div style={{ x }} className="relative flex gap-12">
                     <div className="flex justify-around items-start flex-col">
-                        <div className="w-[320px] h-[320px] bg-default-blue/25 top-[28rem] -left-96 absolute rounded-full blur-max -z-10"></div>
-                        <div className="w-[320px] h-[320px] bg-default-orange/25 -left-72  absolute rounded-full blur-max -z-10"></div>
-
                         <motion.p
                             ref={ref}
                             initial={{opacity: 0}}
@@ -54,7 +56,7 @@ const GameCardsCarousel = () => {
                                     duration: 0.5,
                                 }
                             }}
-                            className="text-4xl py-24 text-default-white/50">Building <span className="font-quicksand font-bold text-default-orange"
+                            className="text-4xl py-24 font-semibold text-default-black/50">Building <span className=" font-bold text-default-orange"
                             >
                                 games</span>, fueled<br></br> by fun and creativity!</motion.p>
                         <button className="bg-default-orange py-2 px-6 rounded-xl text-xl tracking-wide">Contact</button>
@@ -89,7 +91,7 @@ const Game = ({ game }) => {
                     ease: "easeInOut",
                 }
             }}
-            className={`relative h-[75dvh] w-[85dvh] ${game.bgColor} text-default-black rounded-2xl p-8 text-2xl overflow-hidden`}>
+            className={`relative h-[80dvh] w-[80dvh] ${game.bgColor} text-default-black rounded-2xl p-8 text-2xl overflow-hidden`}>
             <div className={`flex justify-between items-center pb-12`}>
                 <p className={`${game.textColor}`}>{game.title}</p>
                 <button onClick={() => {

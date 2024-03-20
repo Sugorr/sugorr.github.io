@@ -24,6 +24,7 @@ export default {
           'max': '100px',
         },
         backgroundImage: {
+          //3D Objects Images
           'web-1': "url('/src/assets/objects/ebike.png')",
           'web-2': "url('/src/assets/objects/snail.png')",
           'web-3': "url('/src/assets/objects/bee_hotel.png')",
@@ -37,6 +38,7 @@ export default {
           'web-11': "url('/src/assets/objects/Chibi-Rovic-1.png')",
           'web-12': "url('/src/assets/objects/Chibi-Jea-1.png')",
 
+          //Game Images
           'game-1': "url('/src/assets/games/birdio.png')",
           'game-2': "url('/src/assets/games/knock.png')",
           'game-3': "url('/src/assets/games/grab.png')",

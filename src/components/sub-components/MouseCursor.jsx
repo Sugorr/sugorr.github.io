@@ -20,7 +20,7 @@ export default function MouseCursor({isHover}) {
 
 
     return (
-        <div className="fixed place-content-center inset-0 z-50 pointer-events-none">
+        <div className="fixed place-content-center inset-0 z-50 pointer-events-none overflow-hidden">
             <AnimatePresence>
                 <motion.div
                     key="cursor"
@@ -28,7 +28,7 @@ export default function MouseCursor({isHover}) {
                     animate={{ opacity: 1, scale: 1, x: mousePos.x - 16, y: mousePos.y - 16}}
                     exit={{ opacity: 0, scale: 0.5 }}
                     transition={{ duration: 0.1, type: "spring", ease: "easeIn" }}
-                    className="absolute w-8 h-8 bg-default-white rounded-full z-50"
+                    className="absolute w-12 h-12 bg-default-orange rounded-full z-50"
                 />
             </AnimatePresence>
         </div>

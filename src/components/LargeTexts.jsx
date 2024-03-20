@@ -68,7 +68,7 @@ export default function LargeTexts() {
         <>
             <motion.div
             ref={textRef} variants={containerSloganVariants} initial="hidden" animate={textInView ? "show" : "hidden"}
-            className="flex flex-col justify-center items-center py-32 text-[5dvh] text-center font-bold">
+            className="flex flex-col justify-center items-center md:py-32 py-12 text-[6dvh] text-center font-bold">
                 <motion.p variants={textSloganVariants}>Mastery comes from <span className="text-default-orange">learning</span> one </motion.p>
                 <motion.p variants={textSloganVariants}>lesson at a time and <span className="text-default-orange">developing</span> </motion.p>
                 <motion.p variants={textSloganVariants}>expertise.</motion.p>
@@ -77,7 +77,7 @@ export default function LargeTexts() {
             <div className="relative flex flex-col justify-center items-center">
                 <motion.ul
                     ref={firstList} variants={containerVariants} initial="hidden" animate={firstListInView ? "show" : "hidden"}
-                    className="group h-full w-full my-32 font-extrabold tracking-wide text-[5dvw]">
+                    className="group h-full w-full my-32 font-extrabold tracking-wide text-[10dvh]">
                     {FirstTextList.map((item, index) => (
                         <ListedItem key={index} text={item.text} />
                     ))}
@@ -85,7 +85,7 @@ export default function LargeTexts() {
                 
                 <motion.ul
                     ref={secondList} variants={containerVariants} initial="hidden" animate={secondListInView ? "show" : "hidden"}
-                    className="group h-full w-full my-32 font-extrabold text-right tracking-wide text-[5dvw]">
+                    className="group h-full w-full md:my-32 my-12 font-extrabold text-right tracking-wide text-[10dvh]">
                     {SecondTextList.map((item, index) => (
                         <ListedItem key={index} text={item.text} index={index} />
                     ))}
@@ -112,7 +112,7 @@ const ListedItem = ({ text, index }) => {
                 variants={textContainerVariants}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
-                className={`relative px-12 py-2 overflow-hidden transition-all duration-300 filter bg-clip-content ${hoveredItem ? "text-default-black" : "group-hover:blur-md"}`}>
+                className={`relative px-12 py-2 overflow-hidden transition-all duration-300 filter bg-clip-content ${hoveredItem ? "text-default-white" : "group-hover:blur-md"}`}>
                     {text}
                 <AnimatePresence>
                     { hoveredItem && ( 
@@ -135,7 +135,7 @@ const ListedItem = ({ text, index }) => {
                                     ease: "easeOut"
                                 }
                             }}
-                            className="absolute top-0 left-0 -z-10 w-full h-full px-12 py-2 bg-default-orange text-default-black">
+                            className="absolute top-0 left-0 -z-10 w-full h-full px-12 py-2 bg-default-orange text-default-white">
                         </motion.div>
                     )}
                 </AnimatePresence>
