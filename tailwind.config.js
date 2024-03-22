@@ -12,9 +12,10 @@ export default {
         },
         colors: {
           'default-black' : '#12161E',
-          'default-orange': '#FA8015',
+          'default-orange': '#E97451',
           'default-blue': '#19C2F0',
           'default-white': '#F1ECEC',
+          'exclusive-orange': '#FA8015',
         },
         fontFamily: {
           'karla': ['Karla', 'sans-serif'],

@@ -6,10 +6,10 @@ export default function WebProjects () {
     return (
         <div className="relative flex justify-center items-center flex-col gap-24">
             <div className="w-full flex flex-col justify-center items-start px-64">
-                <motion.div className="text-[5dvh] font-bold">
+                <motion.div className="text-[4dvh] font-bold">
                     Creating <span className="text-default-orange">websites</span>,
                 </motion.div>
-                <motion.div className="text-[5dvh] font-bold">
+                <motion.div className="text-[4dvh] font-bold">
                     weaving joy into every click.
                 </motion.div>
             </div>
@@ -18,7 +18,7 @@ export default function WebProjects () {
                 >
                 {webs.map((web) => {
                     return (
-                        <Websites key={web.id} title={web.title} desc={web.desc}/> 
+                        <Websites key={web.id} webs={web}/> 
                     );
                 })}
             </motion.div>
@@ -27,20 +27,29 @@ export default function WebProjects () {
 };
 
 
-const Websites = (prop) => {
+const Websites = ({ webs }) => {
+    const [ isClicked, setIsClicked ] = useState(false);
 
     return (
         <motion.div
-            className="group relative w-[25dvw] h-[35dvh]">
-                <div className="transition-all duration-500 ease-out h-full w-full outline outline-2 outline-default-orange/50 rounded-xl"></div>
+            className="group relative w-[20dvw] h-[30dvh]">
+                <div className="transition-all duration-500 absolute -top-4 -left-4 group-hover:top-0 group-hover:left-0 ease-out h-full w-full bg-default-orange/50 rounded-2xl"></div>
                 
-                <motion.div className="transition-all duration-500 absolute top-2 left-2 group-hover:top-0 group-hover:left-0 z-50 p-6 w-full h-full flex justify-start items-left flex-col bg-default-white group-hover:cursor-pointer rounded-xl">
-                    <motion.div className="text-3xl text-default-black font-bold px-5 py-3 tracking-wide self-start rounded-lg">
-                        {prop.title}
+                <motion.div layoutRoot onClick={() => {setIsClicked(!isClicked)}} className={`transition-all duration-500 z-50 p-6 w-full h-full flex ${isClicked ? "items-start" : "items-center"} justify-center flex-col bg-default-white drop-shadow-md group-hover:cursor-pointer rounded-xl`}>
+                    <motion.div layout layoutId={webs.id} className="text-2xl text-default-black font-bold px-5 py-3 tracking-wide rounded-lg select-none">
+                        {webs.title}
                     </motion.div>
-                    <motion.p className="w-full h-full text-default-black font-li tracking-wide px-5 py-6">
-                        {prop.desc}
-                    </motion.p>
+                    {isClicked && (
+                        <motion.p layout
+                        initial={{ opacity: 0, scale: 0}}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.25,
+                        }} 
+                        className="w-full h-full text-default-black font-li tracking-wide px-5 py-6 select-none">
+                            {webs.desc}
+                        </motion.p>
+                    )}
                 </motion.div>
         </motion.div>
     );

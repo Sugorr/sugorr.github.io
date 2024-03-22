@@ -16,7 +16,7 @@ export default function GameProjects() {
                     <div className="h-[60dvh] w-[60dvh] pl-32 flex flex-col justify-around items-start">
                         <motion.div className="text-[4dvw] font-bold text-default-white">Game <br /> Projects</motion.div>
                         <motion.div className="text-[2dvw] text-default-white/50 font-semibold">Building <span className="text-default-white">games</span>, fueled <br /> by fun and creativity!</motion.div>
-                        <motion.div className="text-2xl text-default-black font-light bg-default-white drop-shadow-sm rounded-xl px-10 py-2">
+                        <motion.div className="text-2xl text-default-white bg-default-orange drop-shadow-sm rounded-xl px-10 py-2">
                             Contact
                         </motion.div>
                     </div>
@@ -32,15 +32,15 @@ export default function GameProjects() {
 const Game = ({ game }) => {
 
     return (
-        <div className="group flex flex-col drop-shadow-sm bg-default-white p-4 rounded-2xl">
+        <div className="group flex flex-col drop-shadow-sm bg-default-white p-2 rounded-xl">
             <motion.div
                 key={game.id}
-                className={`relative h-[60dvh] w-[60dvh] flex flex-col ${game.bgColor} text-default-black rounded-xl p-8 group-hover:p-0 transition-all duration-500 text-2xl overflow-hidden`} >
+                className={`relative h-[60dvh] w-[60dvh] flex flex-col ${game.bgColor} text-default-black rounded-lg p-8 group-hover:p-4 transition-all duration-500 text-2xl overflow-hidden`} >
                 <div className={`h-full bg-default-orange rounded-xl ${game.bgImage} bg-cover bg-center`}></div>
             </motion.div>
             <div className={`flex justify-between items-center p-12 font-bold text-3xl`}>
                 <p>{game.title}</p>
-                <a href={`${game.link}`} target="_blank" className={`px-8 py-2 rounded-xl text-xl font-normal text-default-white bg-default-black`}>
+                <a href={`${game.link}`} target="_blank" className={`px-8 py-2 rounded-xl text-xl font-normal text-default-white bg-default-orange`}>
                     Visit
                 </a>
             </div>
