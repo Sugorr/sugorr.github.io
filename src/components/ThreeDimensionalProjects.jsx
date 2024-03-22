@@ -8,10 +8,10 @@ export default function ThreeDimensionalProjects () {
     const textIsInView = useInView(textRef);
 
     return (
-        <div  className="relative flex justify-center items-center flex-col gap-24 pb-32">
-            <div className="flex flex-col gap-8 justify-end text-right w-full py-12 px-[15dvw]">
-                <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.3 } }}className=" lg:text-5xl">Sculpting worlds, molding joy, in</motion.p>
-                <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.6, delay: 0.3 } }}className=" lg:text-5xl"><span className="font-bold text-default-orange">three-dimensional</span>,delight.</motion.p>
+        <div  className="relative flex justify-center items-center flex-col lg:gap-24 gap-12 pb-32">
+            <div className="flex flex-col md:gap-8 gap-2 justify-end md:text-right text-center w-full md:py-12 py-4 px-[15dvw]">
+                <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.3 } }}className=" lg:text-5xl text-xl">Sculpting worlds, molding joy, in</motion.p>
+                <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.6, delay: 0.3 } }}className=" lg:text-5xl text-xl"><span className="font-bold text-default-orange">three-dimensional</span>,delight.</motion.p>
             </div>
 
             <motion.div
@@ -105,7 +105,7 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                     <motion.div
                     layoutId={selectedId}
                     className={`w-full h-full relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
-                        <motion.div className="rounded-full w-32 h-32 bg-default-orange/25">
+                        <motion.div className="absolute top-4 right-4 rounded-full w-16 h-16 bg-default-orange">
                         </motion.div>
                     </motion.div>
                 </motion.div>

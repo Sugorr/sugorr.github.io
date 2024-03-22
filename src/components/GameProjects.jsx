@@ -10,12 +10,12 @@ export default function GameProjects() {
     const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"])
 
     return (
-        <section ref={targetRef} className="relative py-24 h-[300vh]">
+        <section ref={targetRef} className="relative py-24 h-[300dvh]">
             <div className="sticky top-0 flex h-screen items-center bg-default-black overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-12">
                     <div className="h-[60dvh] w-[60dvh] pl-32 flex flex-col justify-around items-start">
                         <motion.div className="text-[4dvw] font-bold text-default-white">Game <br /> Projects</motion.div>
-                        <motion.div className="text-[2dvw] text-default-white/50 font-semibold">Building <span className="text-default-white">games</span>, fueled <br /> by fun and creativity!</motion.div>
+                        <motion.div className="text-3xl text-default-white/50 font-semibold">Building <span className="text-default-white">games</span>, fueled <br /> by fun and creativity!</motion.div>
                         <motion.div className="text-2xl text-default-white bg-default-orange drop-shadow-sm rounded-xl px-10 py-2">
                             Contact
                         </motion.div>
@@ -30,7 +30,6 @@ export default function GameProjects() {
 }
 
 const Game = ({ game }) => {
-
     return (
         <div className="group flex flex-col drop-shadow-sm bg-default-white p-2 rounded-xl">
             <motion.div

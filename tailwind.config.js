@@ -38,7 +38,7 @@ export default {
           'web-10': "url('/src/assets/objects/kubo.png')",
           'web-11': "url('/src/assets/objects/Chibi-Rovic-1.png')",
           'web-12': "url('/src/assets/objects/Chibi-Jea-1.png')",
-          'web-13': "url('/src/assets/objects/Chibi-Sugor-1-transparent.png')",
+          'web-13': "url('/src/assets/objects/Lethal-transparent-2.png')",
 
           //Game Images
           'game-1': "url('/src/assets/games/birdio.png')",
