@@ -1,108 +1,50 @@
-import { useEffect, useRef } from "react";
-import { motion, useTransform, useScroll, useSpring, useInView, spring } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-export default function GameProjects () {
-    
-    return (
-        <div className="flex justify-center items-center flex-col mb-48">
-            <GameCardsCarousel />
-        </div>
-    );
-}
-
-const GameCardsCarousel = () => {
+export default function GameProjects() {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
-    });
-    
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
+    })
 
-    const x = useTransform(scaleX, [0, 1], ["35%", "-40%"]);
-
-    
-    const ref = useRef();
-    const isInView = useInView(ref, {margin: "0px 0px -120px 0px"});
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"])
 
     return (
-        <div ref={targetRef} className="relative h-[300vh] flex justify-center items-start">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-default-orange/10 rounded-lg">
-                <motion.div style={{ x }} className="relative flex gap-12">
-                    <div className="flex justify-around items-start flex-col">
-                        <motion.p
-                            ref={ref}
-                            initial={{opacity: 0}}
-                            animate={{
-                                opacity: isInView ? 1 : 0,
-                                y: isInView ? 0 : 50,
-                                transition: {
-                                    duration: 0.5,
-                                }
-                            }}
-                            className="text-7xl font-bold"
-                            >
-                                Game<br />Projects</motion.p>
-                        <motion.p
-                            ref={ref}
-                            initial={{opacity: 0}}
-                            animate={{
-                                opacity: isInView ? 1 : 0,
-                                x: isInView ? 0 : 50,
-                                transition: {
-                                    duration: 0.5,
-                                }
-                            }}
-                            className="text-4xl py-24 font-semibold text-default-black/50">Building <span className=" font-bold text-default-orange"
-                            >
-                                games</span>, fueled<br></br> by fun and creativity!</motion.p>
-                        <button className="bg-default-orange py-2 px-6 rounded-xl text-xl tracking-wide">Contact</button>
+        <section ref={targetRef} className="relative py-24 h-[300vh]">
+            <div className="sticky top-0 flex h-screen items-center bg-default-black overflow-hidden">
+                <motion.div style={{ x }} className="flex gap-12">
+                    <div className="h-[60dvh] w-[60dvh] pl-32 flex flex-col justify-around items-start">
+                        <motion.div className="text-[4dvw] font-bold text-default-white">Game <br /> Projects</motion.div>
+                        <motion.div className="text-[2dvw] text-default-white/50 font-semibold">Building <span className="text-default-white">games</span>, fueled <br /> by fun and creativity!</motion.div>
+                        <motion.div className="text-2xl text-default-black font-light bg-default-white drop-shadow-sm rounded-xl px-10 py-2">
+                            Contact
+                        </motion.div>
                     </div>
-                    {games.map((game) => {
-                        return <Game game={game} key={game.id} />;
-                    })}
+                    {games.map((game) => (
+                        <Game game={game} key={game.id}/>
+                    ))}
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
-};
+}
 
 const Game = ({ game }) => {
-    const sampleRef = useRef(null);
 
     return (
-        <motion.div
-            ref={sampleRef}
-            key={game.id}
-            initial={{
-                scale: 1,
-                originX: 0.5,
-                originY: 1,
-            }}
-            whileHover={{
-                scale: 1.02,
-                originX: 0.5,
-                originY: 1,
-                transition: {
-                    duration: 0.35,
-                    ease: "easeInOut",
-                }
-            }}
-            className={`relative h-[80dvh] w-[80dvh] ${game.bgColor} text-default-black rounded-2xl p-8 text-2xl overflow-hidden`}>
-            <div className={`flex justify-between items-center pb-12`}>
-                <p className={`${game.textColor}`}>{game.title}</p>
-                <button onClick={() => {
-                }} className={`${game.textColor} flex justify-normal items-center gap-4`}>
+        <div className="group flex flex-col drop-shadow-sm bg-default-white p-4 rounded-2xl">
+            <motion.div
+                key={game.id}
+                className={`relative h-[60dvh] w-[60dvh] flex flex-col ${game.bgColor} text-default-black rounded-xl p-8 group-hover:p-0 transition-all duration-500 text-2xl overflow-hidden`} >
+                <div className={`h-full bg-default-orange rounded-xl ${game.bgImage} bg-cover bg-center`}></div>
+            </motion.div>
+            <div className={`flex justify-between items-center p-12 font-bold text-3xl`}>
+                <p>{game.title}</p>
+                <a href={`${game.link}`} target="_blank" className={`px-8 py-2 rounded-xl text-xl font-normal text-default-white bg-default-black`}>
                     Visit
-                    <div className="rounded-full bg-white w-6 h-6"></div>
-                </button>
+                </a>
             </div>
-
-            <div className={`h-full bg-default-orange rounded-t-xl ${game.bgImage} bg-cover bg-center`}></div>
-        </motion.div>
+        </div>
     );
 };
 
@@ -110,41 +52,36 @@ const games = [
     {
         title: "Birdio",
         id: "1",
-        url: "",
+        link: "https://sugordev.itch.io/birdio",
         bgColor: "bg-default-black",
         bgImage: "bg-game-1",
-        textColor: "text-default-white",
     },
     {
         title: "Knockout Farming",
         id: "2",
-        url: "",
+        link: "",
         bgColor: "bg-[#FFD4AE]",
         bgImage: "bg-game-2",
-        textColor: "text-default-black",
     },
     {
         title: "Mageterian",
         id: "3",
-        url: "",
+        link: "",
         bgColor: "bg-[#182F24]",
         bgImage: "bg-game-4",
-        textColor: "text-default-white",
     },
     {
         title: "Grab 'Em All",
         id: "4",
-        url: "",
+        link: "",
         bgColor: "bg-[#EFBBFF]",
         bgImage: "bg-game-3",
-        textColor: "text-default-black",
     },
     {
         title: "Sample Game",
         id: "5",
-        url: "",
+        link: "",
         bgColor: "bg-[#FFD4AE]",
         bgImage: "bg-game-5",
-        textColor: "text-default-black",
     },
 ];

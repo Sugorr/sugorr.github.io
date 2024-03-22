@@ -16,34 +16,14 @@ export default function HeroBanner (){
     const textUp = useTransform(scrollYProgress, [1, 0], [0, -520])
     const opacityScroll = useTransform(scrollYProgress, [1, 0], ["100%", "0%"])
 
-    const words = [
-        {
-          text: "Creative",
-          className: "font-quicksand font-bold text-[10dvh]",
-        },
-        {
-          text: "Frontend",
-          className: "font-quicksand font-bold text-[10dvh]",
-        },
-        {
-          text: "&",
-          className: "font-quicksand font-bold text-[10dvh]",
-        },
-        {
-          text: "Game",
-          className: "font-quicksand font-bold text-[10dvh]",
-        },
-    ];
-
     return (
-        <div ref={ targetRef } className='relative md:px-64 px-10 py-24 h-dvh flex justify-around items-center flex-col md:gap-32 gap-16'> 
-            <div className="relative overflow-hidden self-start text-left">
+        <div ref={ targetRef } className='relative lg:px-64 px-10 py-12 text-center h-dvh flex justify-start items-center flex-col gap-4 overflow-hidden'> 
+            <div className="relative text-center font-extrabold lg:text-[5dvh] text-[4dvh]">
                 <motion.div
                     style={{ translateX: textLeftX, translateY: textUp }}
                     initial={{ opacity: 0}}
                     animate={{ opacity: 1}}
                     transition={{ duration: 2.5 }}
-                    className='font-bold text-[5dvh]'
                 >
                     I'm Joaquin Reynera,
                 </motion.div>
@@ -53,9 +33,8 @@ export default function HeroBanner (){
                     initial={{ opacity: 0}}
                     animate={{ opacity: 1}}
                     transition={{ duration: 0.5, ease: 'easeInOut', delay: 1}}
-                    className='font-bold text-[5dvh]'
                 >
-                    Creative Frontend & Game
+                    Creative <span className="text-default-orange">Frontend & Game</span>
                 </motion.p>
                 
                 <motion.div
@@ -63,7 +42,6 @@ export default function HeroBanner (){
                     initial={{ opacity: 0}}
                     animate={{ opacity: 1}}
                     transition={{ duration: 2.5 }}
-                    className='font-bold text-default-orange text-[5dvh]'
                 >
                     Developer
                 </motion.div>
@@ -73,9 +51,13 @@ export default function HeroBanner (){
             initial={{ opacity: 0, y: 15}}
             animate={{ opacity: 1, y: 0}}
             transition={{ duration: 1}}
-            className='md:text-2xl text-xl self-end text-right font-regular text-default-black w-1/2'>
+            className='md:text-2xl text-xl font-regular text-default-black w-1/2'>
                 I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.
             </motion.p>
+
+            <motion.div className="bg-web-13 bg-center bg-contain bg-no-repeat w-full h-full">
+                
+            </motion.div>
         </div>
     );
 }

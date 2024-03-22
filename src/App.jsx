@@ -12,30 +12,19 @@ import Spline from "@splinetool/react-spline";
 
 
 export default function App () {
-    const contentRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-      target: contentRef,
-    });
-  
-    const smoothProgress = useSpring(scrollYProgress, { mass: 0.1, damping: 40, restDelta: 0.001 });
-    
-    const elementHeight = window.innerHeight;
-
-    const y = useTransform(smoothProgress, [0, 1], ["0", `${elementHeight}`]);
-  
 
     return (
         <>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.2 } }}className="fixed w-screen h-screen z-[100]">
+            {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.2 } }}className="fixed w-screen h-screen z-[100]">
                 <Spline scene="https://prod.spline.design/Mwof4fIuiuHoa-li/scene.splinecode" />
-            </motion.div>
-            <MouseCursor />
-            <motion.div ref={contentRef} style={{ y }}>
-                <Navbar />
-                <HeroBanner />
-                <ThreeDimensionalProjects />
-                <LargeTexts />
-            </motion.div>
+            </motion.div> */}
+            {/* <MouseCursor /> */}
+            <Navbar />
+            <HeroBanner />
+            <WebProjects />
+            <GameProjects />
+            <ThreeDimensionalProjects />
+            <LargeTexts />
         </>
         
     );

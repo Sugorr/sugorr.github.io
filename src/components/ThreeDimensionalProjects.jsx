@@ -15,7 +15,7 @@ export default function ThreeDimensionalProjects () {
             </div>
 
             <motion.div
-                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[85dvw] h-[170dvw] overflow-hidden"
+                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[75dvw] h-[150dvw] overflow-hidden"
                 >
                     {Objects.map((obj, index) => (
                         <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id}/>
@@ -101,11 +101,12 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                     opacity: 0,
                 }}
                 onClick={() => setSelectedId(null)}
-                className="fixed p-8 inset-0 backdrop-blur-md z-20 grid bg-default-white place-items-center overflow-y-scroll">
+                className="fixed p-8 inset-0 grid grid-cols-4 backdrop-blur-md z-20 bg-default-white place-items-center overflow-y-scroll">
                     <motion.div
                     layoutId={selectedId}
-                    className={`w-[80dvw] h-[90dvh] relative ${col} ${row} rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
-                    
+                    className={`w-full h-full relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
+                        <motion.div className="rounded-full w-32 h-32 bg-default-orange/25">
+                        </motion.div>
                     </motion.div>
                 </motion.div>
                 )}
