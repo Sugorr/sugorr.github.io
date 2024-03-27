@@ -16,7 +16,7 @@ export default function WebProjects () {
             <AnimatePresence>
                 <motion.div
                 layoutRoot
-                className="grid lg:grid-cols-3 sm:grid-cols-2 grid-rows-2 gap-12 relative lg:py-16 py-8 lg:px-24 px-12 rounded-xl"
+                className="grid lg:grid-cols-3 sm:grid-cols-2 gap-12 relative lg:py-16 py-8 lg:px-24 px-12 rounded-xl"
                     >
                     {webs.map((web) => {
                         return (
@@ -51,12 +51,12 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="w-full h-full line-clamp-3 text-default-black font-li tracking-wide px-5 pt-4 select-none">
+                            className="w-full h-full text-default-black font-li tracking-wide px-5 pt-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
                             <motion.a
-                            href="https://sugorr.github.io/game-tic-tac-toe/"
+                            href={webs.link}
                             target="_blank"
                             initial={{ opacity: 0, y: 25}}
                             animate={{ opacity: 1, y: 0 }}
@@ -76,33 +76,21 @@ const Websites = ({ webs }) => {
 
 const webs = [
     {
-        title: "game-tic-tac-toe",
+        title: "🕹️Tic Tac Toe",
         desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
         id: 1,
+        link: "https://sugorr.github.io/game-tic-tac-toe/",
     },
     {
         title: "Blog Flow",
-        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+        desc: "The seamless platform I created, revolutionizes the way content is managed and shared, simplifying the blogging experience for all.",
         id: 2,
+        link: "https://sugorr.github.io/blog-flow/",
     },
     {
-        title: "Blog Flow",
-        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ipsum Lorem ipsum Lorem ipsum",
+        title: "🕹️Black Jack",
+        desc: "Ace High Blackjack is an engaging online adaptation of the classic casino card game, designed to provide players with an immersive and thrilling experience.",
         id: 3,
-    },
-    {
-        title: "Blog Flow",
-        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-        id: 4,
-    },
-    {
-        title: "Blog Flow",
-        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-        id: 5,
-    },
-    {
-        title: "Blog Flow",
-        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-        id: 6,
+        link: "https://sugorr.github.io/black-jack/",
     },
 ];

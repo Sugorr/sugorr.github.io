@@ -49,8 +49,8 @@ export default function HeroBanner (){
             </div>
             <motion.p
             style={{ translateY: textUp, opacity: opacityScroll }}
-            initial={{ opacity: 0, y: 15}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1}}
             className='md:text-2xl sm:text-xl font-regular text-default-black/50 md:w-1/2'>
                 I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.

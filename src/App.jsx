@@ -6,9 +6,8 @@ import WebProjects from "./components/WebProjects.jsx"
 import GameProjects from "./components/GameProjects.jsx"
 import ThreeDimensionalProjects from "./components/ThreeDimensionalProjects.jsx"
 import LargeTexts from "./components/LargeTexts.jsx"
-import MouseCursor from "./components/sub-components/MouseCursor.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Spline from "@splinetool/react-spline";
+import SkillsSection from "./components/SkillsSection.jsx";
 
 
 export default function App () {
@@ -25,6 +24,7 @@ export default function App () {
             <ThreeDimensionalProjects />
             <GameProjects />
             <LargeTexts />
+            <SkillsSection />
         </>
         
     );
