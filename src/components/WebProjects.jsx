@@ -39,7 +39,7 @@ const Websites = ({ webs }) => {
                 <div className="transition-all duration-500 absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 ease-out h-full w-full bg-default-orange/50 rounded-2xl"></div>
                 
                 <motion.div onClick={() => {setIsClicked(!isClicked)}} className={`transition-all duration-500 z-50 md:p-6 p-2 w-full h-full flex ${isClicked ? "lg:items-start items-center" : "items-center"} justify-center flex-col bg-default-white drop-shadow-md group-hover:cursor-pointer rounded-xl`}>
-                    <motion.div layout layoutId={webs.id} className="text-2xl text-default-black font-bold px-5 py-3 tracking-wide rounded-lg select-none">
+                    <motion.div layout layoutId={webs.id} className="md:text-2xl text-default-black font-bold px-5 py-3 tracking-wide rounded-lg select-none">
                         {webs.title}
                     </motion.div>
                     {!isClicked && (<div className="opacity-50 select-none">click here...</div>)}
@@ -51,7 +51,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="w-full h-full text-default-black font-li tracking-wide px-5 pt-4 select-none">
+                            className="md:line-clamp-4 line-clamp-3 text-default-black font-li tracking-wide px-5 pt-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
