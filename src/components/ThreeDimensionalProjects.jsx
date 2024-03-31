@@ -5,7 +5,7 @@ import { AnimatePresence, cubicBezier, motion, useInView } from "framer-motion";
 
 export default function ThreeDimensionalProjects () {
     const textRef = useRef(null);
-    const textIsInView = useInView(textRef);
+    const textIsInView = useInView( textRef, { once: true, amount: "all" } );
 
     return (
         <div  className="relative flex justify-center items-center flex-col lg:gap-24 gap-12 pb-32">
@@ -15,7 +15,7 @@ export default function ThreeDimensionalProjects () {
             </div>
 
             <motion.div
-                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[75dvw] h-[150dvw] overflow-hidden"
+                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[60dvw] h-[120dvw] overflow-hidden"
                 >
                     {Objects.map((obj, index) => (
                         <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id}/>
@@ -28,13 +28,11 @@ export default function ThreeDimensionalProjects () {
 
 const GridObject = ({ id, col, row, bg, dir, objSize }) => {
     const targetRef = useRef({});
-    const isInView = useInView(targetRef, { margin: "200px 0px 200px 0px"});
+    const isInView = useInView(targetRef, { margin: "200px 0px 0px 0px"});
 
     const [ isHovered, setIsHovered ] = useState(false);
 
     const [ selectedId, setSelectedId ] = useState(null);
-
-    const randomNum = Math.random() * (1 - 0.5) + 0.5;
 
     const OnMouseEntered = () => {
         setIsHovered(true);
@@ -57,10 +55,10 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    x:  isInView ? 0 : dir * randomNum,
+                    y:  isInView ? 0 : 20,
                     transition: {
-                        duration: 1.2 * randomNum,
-                        delay: 0.5 * randomNum,
+                        duration: 1.2,
+                        delay: 0.5,
                         ease: cubicBezier(0.190, 1.000, 0.220, 1.000),
                     }
                 }}
@@ -122,85 +120,71 @@ const Objects = [
         col: "col-span-2",
         row: "row-span-1",
         bg: "bg-web-1",
-        dir: -100,
     },
     {
         id: "2",
         col: "col-span-2",
         row: "row-span-3",
         bg: "bg-web-2",
-        dir: 100,
-
     },
     {
         id: "3",
         col: "col-span-2",
         row: "row-span-2",
         bg: "bg-web-8",
-        dir: -100,
-
     },
     {
         id: "4",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-4",
-        dir: 100,
     },
     {
         id: "5",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-5",
-        dir: -100,
     },
     {
         id: "6",
         col: "col-span-2",
         row: "row-span-3",
         bg: "bg-web-7",
-        dir: 100,
     },
     {
         id: "7",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-3",
-        dir: 100,
     },
     {
         id: "8",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-6",
-        dir: 100,
     },
     {
         id: "9",
         col: "col-span-2",
         row: "row-span-2",
         bg: "bg-web-9",
-        dir: 100,
     },
     {
         id: "10",
         col: "col-span-2",
         row: "row-span-2",
         bg: "bg-web-10",
-        dir: 100,
     },
     {
         id: "11",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-11",
-        dir: 100,
     },
     {
         id: "12",
         col: "col-span-1",
         row: "row-span-1",
         bg: "bg-web-12",
-        dir: 100,
     },
 ]

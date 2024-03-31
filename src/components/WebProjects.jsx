@@ -5,14 +5,6 @@ export default function WebProjects () {
 
     return (
         <div className="relative flex justify-center items-center flex-col md:gap-24 gap-12">
-            <div className="w-full flex flex-col justify-center lg:text-left text-center items-start lg:px-64 px-24">
-                <motion.div className="text-[4dvh] font-bold">
-                    Creating <span className="text-default-orange">websites</span>,
-                </motion.div>
-                <motion.div className="text-[4dvh] font-bold">
-                    weaving joy into every click.
-                </motion.div>
-            </div>
             <AnimatePresence>
                 <motion.div
                 layoutRoot
@@ -35,6 +27,11 @@ const Websites = ({ webs }) => {
 
     return (
         <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+                duration: 1,
+            }}
             className="group relative lg:w-[20dvw] sm:w-[30dvw] w-[40dvw] lg:h-[30dvh] h-[25dvh]">
                 <div className="transition-all duration-500 absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 ease-out h-full w-full bg-default-orange/50 rounded-2xl"></div>
                 
@@ -63,7 +60,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="p-4 underline cursor-pointer hover:text-default-orange">See Repo</motion.a>
+                            className="p-4 underline cursor-pointer hover:text-default-orange">See Website</motion.a>
                         </>
                         
                     )}
