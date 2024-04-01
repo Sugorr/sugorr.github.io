@@ -21,8 +21,8 @@ export default function App () {
             <Navbar />
             <HeroBanner />
             <WebProjects />
-            <ThreeDimensionalProjects />
             <GameProjects />
+            <ThreeDimensionalProjects />
             <LargeTexts />
             <SkillsSection />
             <ContactSection />

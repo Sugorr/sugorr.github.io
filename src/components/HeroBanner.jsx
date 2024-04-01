@@ -18,8 +18,8 @@ export default function HeroBanner (){
     const opacityScroll = useTransform(scrollYProgress, [1, 0], ["100%", "0%"])
 
     return (
-        <div ref={ targetRef } className='relative lg:px-64 px-10 py-12 mb-32 text-center flex justify-start items-center flex-col gap-4 overflow-hidden'> 
-            <div className="relative text-center font-extrabold lg:text-[5dvh] text-[3dvh]">
+        <div ref={ targetRef } className='relative lg:px-64 px-10 py-32 text-center flex justify-start items-center flex-col gap-4 overflow-hidden'> 
+            <div className="relative text-center font-extrabold lg:text-[8dvh] text-[3dvh]">
                 <motion.div
                     style={{ translateX: textLeftX, translateY: textUp }}
                     initial={{ opacity: 0}}
@@ -52,7 +52,7 @@ export default function HeroBanner (){
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1}}
-            className='md:text-2xl sm:text-xl font-regular text-default-black/50 md:w-1/2'>
+            className='md:text-2xl sm:text-xl font-regular text-default-black md:w-1/2'>
                 I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.
             </motion.p>
         </div>
