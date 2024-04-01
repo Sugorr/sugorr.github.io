@@ -9,14 +9,14 @@ export default function GameProjects() {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"])
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"])
 
 
     return (
         <section ref={targetRef} className="relative h-[200vh] items-center bg-default-black md:rounded-3xl rounded-xl">
-            <motion.div ref={textRef} className="sticky top-0 flex h-screen items-center overflow-hidden p-32">
-                <motion.div style={{ x }} className="h-full flex py-32 gap-12 items-center">
-                    <motion.div className="relative -left-32 h-full w-full md:px-32 px-4 flex flex-col justify-between items-start">
+            <motion.div ref={textRef} className="sticky top-0 flex h-screen items-center overflow-hidden md:py-32 py-12">
+                <motion.div style={{ x }} className="h-full flex md:py-32 py-12 gap-12 items-center">
+                    <motion.div className="relative h-full w-full md:px-32 px-4 flex flex-col justify-between items-start">
                         <motion.div
                         initial={{ y: 20, opacity: 0 }} 
                         animate={{ y: textInView ? 0 : 20, opacity: textInView ? 1 : 0, transition: {duration: 0.5}}} 

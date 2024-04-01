@@ -48,7 +48,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="line-clamp-3 text-default-black tracking-wide px-5 pt-4 select-none">
+                            className=" md:text-lg md:line-clamp-6 line-clamp-3 text-xs text-default-black tracking-wide px-5 md:py-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
@@ -60,7 +60,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="md:px-5 md:my-8 p-5 underline text-left w-full cursor-grab text-default-black hover:text-default-orange">See Website</motion.a>
+                            className="md:px-5 md:my-3 px-5 py-2 md:text-base text-xs underline text-left w-full cursor-grab text-default-black hover:text-default-orange">See Website</motion.a>
                         </>
                         
                     )}
@@ -72,7 +72,7 @@ const Websites = ({ webs }) => {
 
 const webs = [
     {
-        title: "🕹️Tic Tac Toe",
+        title: "Tic Tac Toe",
         desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
         id: 1,
         link: "https://sugorr.github.io/game-tic-tac-toe/",
@@ -84,7 +84,7 @@ const webs = [
         link: "https://sugorr.github.io/blog-flow/",
     },
     {
-        title: "🕹️Black Jack",
+        title: "Black Jack",
         desc: "Ace High Blackjack is an engaging online adaptation of the classic casino card game, designed to provide players with an immersive and thrilling experience.",
         id: 3,
         link: "https://sugorr.github.io/black-jack/",
