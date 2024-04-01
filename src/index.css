@@ -16,7 +16,7 @@ body{
 
 *{
   color: #12161E;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 ::selection{
@@ -24,7 +24,7 @@ body{
   background: #FA8015;
 }
 
-/* 
+
 ::-webkit-scrollbar {
   display: none;
-} */
+}

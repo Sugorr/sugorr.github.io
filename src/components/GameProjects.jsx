@@ -7,24 +7,17 @@ export default function GameProjects() {
         target: targetRef,
     });
 
-    // Calculate the total width of all games
-    const totalGamesWidth = games.length * 300; // Assuming each game card is 300px wide
-
-    // Calculate the right constraint for dragging
-    const rightConstraint = -totalGamesWidth + window.innerWidth - 25; // Assuming 25px padding on the right side
-
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", rightConstraint]);
 
     return (
         <section ref={targetRef} className="relative flex h-screen items-center bg-default-black overflow-hidden py-24">
             <div className="h-full w-full px-32 flex flex-col justify-around items-start bg-default-black z-10">
                 <motion.div className="text-[4dvw] font-bold text-default-white">Game <br /> Projects</motion.div>
                 <motion.div className="text-3xl text-default-white/50 font-semibold">Building <span className="text-default-white">games</span>, fueled <br /> by fun and creativity!</motion.div>
-                <motion.div className="text-2xl text-default-white bg-default-orange drop-shadow-sm rounded-xl px-10 py-2">
-                    Contact
-                </motion.div>
+                <motion.a href="https://sugordev.itch.io" target="_blank" className="text-2xl text-default-white bg-default-orange drop-shadow-sm rounded-xl px-10 py-2">
+                    See All
+                </motion.a>
             </div>
-            <motion.div drag="x" dragConstraints={{ left: 25, right: rightConstraint }} dragElastic={0.2} style={{ x }} className="flex h-full w-full py-6 gap-12">
+            <motion.div className="flex h-full w-full py-6 gap-12">
                 {games.map((game) => (
                     <Game game={game} key={game.id}/>
                 ))}
@@ -62,29 +55,22 @@ const games = [
     {
         title: "Knockout Farming",
         id: "2",
-        link: "",
+        link: "https://sugordev.itch.io/knockout",
         bgColor: "bg-[#FFD4AE]",
         bgImage: "bg-game-2",
     },
     {
         title: "Mageterian",
         id: "3",
-        link: "",
+        link: "https://sugordev.itch.io/mageterian",
         bgColor: "bg-[#182F24]",
         bgImage: "bg-game-4",
     },
     {
         title: "Grab 'Em All",
         id: "4",
-        link: "",
+        link: "https://sugordev.itch.io/grab-em-all",
         bgColor: "bg-[#EFBBFF]",
         bgImage: "bg-game-3",
-    },
-    {
-        title: "Sample Game",
-        id: "5",
-        link: "",
-        bgColor: "bg-[#FFD4AE]",
-        bgImage: "bg-game-5",
     },
 ];

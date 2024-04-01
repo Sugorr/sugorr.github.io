@@ -26,7 +26,7 @@ export default function HeroBanner (){
                     animate={{ opacity: 1}}
                     transition={{ duration: 2.5 }}
                 >
-                    I'm Joaquin Reynera,
+                    I'm Joaquin Reynera
                 </motion.div>
 
                 <motion.p 

@@ -20,9 +20,6 @@ export default function Navbar () {
                         Works
                     </motion.li>
                     <motion.li className='transition-all duration-300 py-3 md:px-10 px-4  cursor-pointer hover:text-default-orange'>
-                        Skills
-                    </motion.li>
-                    <motion.li className='transition-all duration-300 py-3 md:px-10 px-4  cursor-pointer hover:text-default-orange'>
                         Contacts
                     </motion.li>
                 </ul>

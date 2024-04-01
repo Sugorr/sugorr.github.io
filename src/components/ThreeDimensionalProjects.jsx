@@ -15,7 +15,7 @@ export default function ThreeDimensionalProjects () {
             </div>
 
             <motion.div
-                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[60dvw] h-[120dvw] overflow-hidden"
+                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[80dvw] h-[160dvw] overflow-hidden"
                 >
                     {Objects.map((obj, index) => (
                         <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id}/>
@@ -28,7 +28,7 @@ export default function ThreeDimensionalProjects () {
 
 const GridObject = ({ id, col, row, bg, dir, objSize }) => {
     const targetRef = useRef({});
-    const isInView = useInView(targetRef, { margin: "200px 0px 0px 0px"});
+    const isInView = useInView(targetRef, { margin: "200px 0px 0px 0px", once: "true"});
 
     const [ isHovered, setIsHovered ] = useState(false);
 

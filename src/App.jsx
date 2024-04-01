@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import HeroBanner from "./components/HeroBanner.jsx"
 import WebProjects from "./components/WebProjects.jsx"
@@ -8,6 +7,7 @@ import ThreeDimensionalProjects from "./components/ThreeDimensionalProjects.jsx"
 import LargeTexts from "./components/LargeTexts.jsx"
 import Navbar from "./components/Navbar.jsx";
 import SkillsSection from "./components/SkillsSection.jsx";
+import ContactSection from "./components/ContactSection.jsx";
 
 
 export default function App () {
@@ -25,6 +25,7 @@ export default function App () {
             <GameProjects />
             <LargeTexts />
             <SkillsSection />
+            <ContactSection />
         </>
         
     );
