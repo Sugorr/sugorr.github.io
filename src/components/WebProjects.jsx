@@ -32,11 +32,11 @@ const Websites = ({ webs }) => {
             transition={{
                 duration: 1,
             }}
-            className="group relative lg:w-[25dvw] sm:w-[30dvw] w-[40dvw] lg:h-[35dvh] h-[25dvh]">
+            className="group relative lg:w-[25dvw] sm:w-[30dvw] w-[30dvh] lg:h-[35dvh] h-[25dvh]">
                 <div className="transition-all duration-500 absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 ease-out h-full w-full bg-default-orange/50 rounded-2xl -z-10"></div>
                 
-                <motion.div onClick={() => {setIsClicked(!isClicked)}} className={`transition-all ease-in duration-75 z-50 md:p-6 p-2 w-full h-full flex ${isClicked ? "lg:items-start items-center" : "items-center"} justify-center flex-col bg-default-white drop-shadow-md group-hover:cursor-pointer rounded-xl`}>
-                    <motion.div layout layoutId={webs.id} className="md:text-2xl text-default-black font-bold px-5 py-3 tracking-wide rounded-lg select-none">
+                <motion.div onClick={() => {setIsClicked(!isClicked)}} className={`transition-all ease-in duration-75 z-50 md:p-6 p-2 w-full h-full flex ${isClicked ? "lg:items-start items-center" : "items-center"} justify-center items-start flex-col bg-default-white drop-shadow-md group-hover:cursor-pointer rounded-xl`}>
+                    <motion.div layout layoutId={webs.id} className="md:text-3xl text-default-black font-bold px-5 py-3 tracking-wide rounded-lg select-none">
                         {webs.title}
                     </motion.div>
                     {!isClicked && (<div className="text-default-black opacity-50 select-none">click here...</div>)}
@@ -48,7 +48,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="md:line-clamp-3 line-clamp-2 text-default-black font-li tracking-wide px-5 pt-4 select-none">
+                            className="line-clamp-3 text-default-black tracking-wide px-5 pt-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
@@ -60,12 +60,11 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className="px-5 py-8 underline cursor-pointer text-default-black hover:text-default-orange">See Website</motion.a>
+                            className="md:px-5 md:my-8 p-5 underline text-left w-full cursor-grab text-default-black hover:text-default-orange">See Website</motion.a>
                         </>
                         
                     )}
                 </motion.div>
-
         </motion.div>
     );
 }

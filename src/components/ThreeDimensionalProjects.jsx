@@ -102,7 +102,7 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                 className="fixed p-8 inset-0 grid grid-cols-4 backdrop-blur-md z-20 bg-default-white/15 place-items-center overflow-y-scroll">
                     <motion.div
                     layoutId={selectedId}
-                    className={`w-[80dvh] h-[80dvh] relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
+                    className={`md:w-[80dvh] md:h-[80dvh] w-[80dvw] h-[80dvw] relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
                         <motion.div
                         initial={{ rotate: 0, size: 1}}
                         whileHover={{
@@ -117,7 +117,7 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                                 repeatDelay: 0.25,
                             },
                         }}
-                        className="absolute top-4 right-4 rounded-xl grid place-content-center w-16 h-16 bg-default-orange">
+                        className="absolute md:grid hidden top-4 right-4 rounded-xl place-content-center w-16 h-16 bg-default-orange">
                             <motion.svg
 
                             fill="#F1ECEC" height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
