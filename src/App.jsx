@@ -30,16 +30,16 @@ export default function App () {
             </motion.div> */}
             {/* <MouseCursor /> */}
             {preLoaded && (
-            <>
-            <Navbar />
-            <HeroBanner />
-            <WebProjects />
-            <GameProjects />
-            <ThreeDimensionalProjects />
-            <LargeTexts />
-            <SkillsSection />
-            <ContactSection />
-            </>
+                <>
+                    <Navbar />
+                    <HeroBanner />
+                    <WebProjects />
+                    <GameProjects />
+                    <ThreeDimensionalProjects />
+                    <LargeTexts />
+                    <SkillsSection />
+                    <ContactSection />
+                </>
             )};
         </>
         

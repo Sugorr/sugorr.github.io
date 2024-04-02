@@ -45,11 +45,11 @@ export default function GameProjects() {
 const Game = ({ game }) => {
     return (
         <div className={`group flex flex-col items-center ${game.bgColor} p-2 rounded-xl`}>
-            <motion.div
+            <div
                 key={game.id}
                 className={`relative md:h-[70vh] md:w-[70vh] h-[45vh] w-[45vh] flex item-center rounded-lg p-8 group-hover:p-4 transition-all duration-500 text-2xl overflow-hidden`} >
                 <div className={`h-full w-full bg-default-orange rounded-xl ${game.bgImage} bg-cover bg-center`}></div>
-            </motion.div>
+            </div>
             <div className={`flex w-full md:flex-row flex-col gap-4 justify-between items-center md:p-12 font-bold text-3xl`}>
                 <p className={`${game.textColor} sm:text-3xl text-xl line-clamp-1 text-left`}>{game.title}</p>
                 <a href={`${game.link}`} target="_blank" className={`px-8 py-2 rounded-xl text-xl font-normal text-default-white bg-default-orange`}>
