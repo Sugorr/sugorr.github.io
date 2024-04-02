@@ -9,13 +9,13 @@ export default function ThreeDimensionalProjects () {
 
     return (
         <div  className="relative flex justify-center items-center flex-col lg:gap-24 gap-12 py-32">
-            <div className="flex flex-col md:gap-8 gap-2 justify-end md:text-right text-center w-full md:py-12 py-4 px-[15dvw]">
+            <div className="flex flex-col md:gap-8 gap-2 justify-end md:text-right text-center w-full md:py-12 py-4 px-[15vw]">
                 <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.3 } }}className=" lg:text-5xl text-xl">Sculpting worlds, molding joy, in</motion.p>
                 <motion.p ref={textRef} initial={{ opacity: 0 }} animate={{ opacity: textIsInView ? 1 : 0, y: textIsInView ? 0 : 100, transition: { duration: 0.6, delay: 0.3 } }}className=" lg:text-5xl text-xl"><span className="font-bold text-default-orange">three-dimensional</span>,delight.</motion.p>
             </div>
 
             <motion.div
-                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[70dvw] h-[140dvw] overflow-hidden"
+                className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[70vw] h-[140vw] overflow-hidden"
                 >
                     {Objects.map((obj, index) => (
                         <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id}/>
@@ -102,7 +102,7 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                 className="fixed p-8 inset-0 grid grid-cols-4 backdrop-blur-md z-20 bg-default-white/15 place-items-center overflow-y-scroll">
                     <motion.div
                     layoutId={selectedId}
-                    className={`md:w-[80dvh] md:h-[80dvh] w-[80dvw] h-[80dvw] relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
+                    className={`md:w-[80vh] md:h-[80vh] w-[80vw] h-[80vw] relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>
                         <motion.div
                         initial={{ rotate: 0, size: 1}}
                         whileHover={{
@@ -119,7 +119,6 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                         }}
                         className="absolute md:grid hidden top-4 right-4 rounded-xl place-content-center w-16 h-16 bg-default-orange">
                             <motion.svg
-
                             fill="#F1ECEC" height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 viewBox="0 0 460.775 460.775" xml:space="preserve">
                                 <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55

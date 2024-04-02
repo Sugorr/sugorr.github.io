@@ -68,7 +68,7 @@ export default function LargeTexts() {
         <>
             <motion.div
             ref={textRef} variants={containerSloganVariants} initial="hidden" animate={textInView ? "show" : "hidden"}
-            className="flex flex-col justify-center items-center md:gap-12 lg:py-32 py-6 md:text-[6dvh] text-2xl text-center font-bold">
+            className="flex flex-col justify-center items-center md:gap-12 lg:py-32 py-6 md:text-[6vh] text-2xl text-center font-bold">
                 <motion.p variants={textSloganVariants}>Mastery comes from <span className="text-default-orange">learning</span> one </motion.p>
                 <motion.p variants={textSloganVariants}>lesson at a time and <span className="text-default-orange">developing</span> </motion.p>
                 <motion.p variants={textSloganVariants}>expertise.</motion.p>
@@ -77,7 +77,7 @@ export default function LargeTexts() {
             <div className="relative flex flex-col justify-center items-center">
                 <motion.ul
                     ref={firstList} variants={containerVariants} initial="hidden" animate={firstListInView ? "show" : "hidden"}
-                    className="group w-full md:my-32 my-4 font-extrabold tracking-wide md:text-[10dvh] text-[5dvh]">
+                    className="group w-full md:my-32 my-4 font-extrabold tracking-wide md:text-[10vh] text-[5vh]">
                     {FirstTextList.map((item, index) => (
                         <ListedItem key={index} text={item.text} />
                     ))}
@@ -85,7 +85,7 @@ export default function LargeTexts() {
                 
                 <motion.ul
                     ref={secondList} variants={containerVariants} initial="hidden" animate={secondListInView ? "show" : "hidden"}
-                    className="group w-full md:my-32 my-12 font-extrabold text-right tracking-wide md:text-[10dvh] text-[5dvh]">
+                    className="group w-full md:my-32 my-12 font-extrabold text-right tracking-wide md:text-[10vh] text-[5vh]">
                     {SecondTextList.map((item, index) => (
                         <ListedItem key={index} text={item.text} index={index} />
                     ))}

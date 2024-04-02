@@ -32,7 +32,7 @@ const Websites = ({ webs }) => {
             transition={{
                 duration: 1,
             }}
-            className="group relative lg:w-[25dvw] sm:w-[30dvw] w-[30dvh] lg:h-[35dvh] h-[25dvh]">
+            className="group relative lg:w-[25dvw] sm:w-[30dvw] w-[30vh] lg:h-[35vh] h-[25vh]">
                 <div className="transition-all duration-500 absolute -top-2 -left-2 group-hover:top-0 group-hover:left-0 ease-out h-full w-full bg-default-orange/50 rounded-2xl -z-10"></div>
                 
                 <motion.div onClick={() => {setIsClicked(!isClicked)}} className={`transition-all ease-in duration-75 z-50 md:p-6 p-2 w-full h-full flex ${isClicked ? "lg:items-start items-center" : "items-center"} justify-center items-start flex-col bg-default-white drop-shadow-md group-hover:cursor-pointer rounded-xl`}>

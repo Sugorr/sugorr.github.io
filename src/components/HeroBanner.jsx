@@ -19,7 +19,7 @@ export default function HeroBanner (){
 
     return (
         <div ref={ targetRef } className='relative md:px-64 px-4 md:py-32 py-24 text-center flex justify-start items-center flex-col gap-4 overflow-hidden'> 
-            <div className="relative flex flex-col items-center text-center font-extrabold md:text-[8dvh] text-[4dvh]">
+            <div className="relative flex flex-col items-center text-center font-extrabold md:text-[8vh] text-[4vh]">
                 <motion.div
                     style={{ translateX: textLeftX, translateY: textUp }}
                     initial={{ opacity: 0}}
