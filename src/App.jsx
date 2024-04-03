@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import HeroBanner from "./components/HeroBanner.jsx"
 import WebProjects from "./components/WebProjects.jsx"
@@ -22,9 +23,14 @@ export default function App () {
 
     return (
         <>
-            {!preLoaded && (
-            <PreloaderSect />
-            )}
+            <AnimatePresence>
+                {!preLoaded && (
+                    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5, }}>
+                        <PreloaderSect />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 1.2 } }}className="fixed w-screen h-screen z-[100]">
                 <Spline scene="https://prod.spline.design/Mwof4fIuiuHoa-li/scene.splinecode" />
             </motion.div> */}
