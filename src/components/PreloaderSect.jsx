@@ -3,14 +3,14 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function PreloaderSect () {
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 2 } }} className="w-screen h-screen inset-0 overflow-hidden absolute z-[100] m-0 bg-default-white grid place-content-center">
+        <motion.div className="w-screen h-screen inset-0 overflow-hidden absolute z-[100] m-0 bg-default-white grid place-content-center">
             <motion.svg
-            initial={{ rotate: 0, y:45, x: 120}}
+            initial={{ rotate: 0, y: 45, x: 120}}
             animate={{
                 rotate: 720,
                 x: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 1.8,
                     ease: "easeInOut",
                     type: "spring",
                 },
@@ -20,13 +20,13 @@ export default function PreloaderSect () {
                 <path d="M24.1465 29.5652C21.9373 29.5652 20.1465 31.3561 20.1465 33.5652C20.1465 35.7744 21.9373 37.5652 24.1465 37.5652C26.3556 37.5652 28.1465 35.7744 28.1465 33.5652C28.1465 31.3561 26.3556 29.5652 24.1465 29.5652Z" fill="#E97451"/>
             </motion.svg>
             <motion.svg
-            initial={{ rotate: 0, y:-45, x: -120}}
+            initial={{ rotate: 0, y: -45, x: -120}}
             animate={{
                 rotate: 720,
             
                 x: 0,
                 transition: {
-                    duration: 1.5,
+                    duration: 1.8,
                     ease: "easeInOut",
                     type: "spring",
                 },
