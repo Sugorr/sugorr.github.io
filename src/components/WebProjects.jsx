@@ -72,16 +72,16 @@ const Websites = ({ webs }) => {
 
 const webs = [
     {
-        title: "Tic Tac Toe",
-        desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
+        title: 'Sikreto',
+        desc: "Share your untold stories, unburden your secrets, and discover the power of anonymous expression in a safe and supportive community.",
         id: 1,
-        link: "https://sugorr.github.io/game-tic-tac-toe/",
+        link: "https://my-sikreto.web.app",
     },
     {
-        title: "Sikreto",
-        desc: "Share your untold stories, unburden your secrets, and discover the power of anonymous expression in a safe and supportive community.",
+        title: "Tic Tac Toe",
+        desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
         id: 2,
-        link: "https://my-sikreto.web.app",
+        link: "https://sugorr.github.io/game-tic-tac-toe/",
     },
     {
         title: "Black Jack",
