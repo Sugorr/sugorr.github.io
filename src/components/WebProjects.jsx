@@ -78,10 +78,10 @@ const webs = [
         link: "https://sugorr.github.io/game-tic-tac-toe/",
     },
     {
-        title: "Blog Flow",
-        desc: "The seamless platform I created, revolutionizes the way content is managed and shared, simplifying the blogging experience for all.",
+        title: "Sikreto",
+        desc: "Share your untold stories, unburden your secrets, and discover the power of anonymous expression in a safe and supportive community.",
         id: 2,
-        link: "https://sugorr.github.io/blog-flow/",
+        link: "https://my-sikreto.web.app",
     },
     {
         title: "Black Jack",
