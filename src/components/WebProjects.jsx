@@ -48,7 +48,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className=" md:text-lg md:line-clamp-6 line-clamp-3 text-xs text-default-black tracking-wide px-5 md:py-4 select-none">
+                            className=" md:text-lg md:line-clamp-6 w-full line-clamp-3 text-xs text-default-black tracking-wide px-5 md:py-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
@@ -78,15 +78,15 @@ const webs = [
         link: "https://my-sikreto.web.app",
     },
     {
-        title: "Tic Tac Toe",
-        desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
+        title: "Madies Admin",
+        desc: "It will simplifies the management of your customer items like never before. With our intuitive platform, you can effortlessly organize, track, and oversee all your customer items in one centralized location.",
         id: 2,
-        link: "https://sugorr.github.io/game-tic-tac-toe/",
+        link: "https://sugorr.github.io/madies-admin/",
     },
     {
-        title: "Black Jack",
-        desc: "Ace High Blackjack is an engaging online adaptation of the classic casino card game, designed to provide players with an immersive and thrilling experience.",
+        title: "Tic Tac Toe",
+        desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
         id: 3,
-        link: "https://sugorr.github.io/black-jack/",
+        link: "https://sugorr.github.io/game-tic-tac-toe/",
     },
 ];
