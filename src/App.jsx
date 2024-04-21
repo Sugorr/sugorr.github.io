@@ -44,7 +44,7 @@ export default function App () {
                     <ThreeDimensionalProjects />
                     <LargeTexts />
                     <SkillsSection />
-                    <ContactSection id="contactSection" /> {/* Make sure to add this id */}
+                    <ContactSection /> {/* Make sure to add this id */}
                 </>
             )}
         </>
