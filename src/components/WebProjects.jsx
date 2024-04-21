@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion"
 export default function WebProjects () { 
 
     return (
-        <div className="relative flex justify-center items-center flex-col md:gap-24 gap-12 mb-32">
+        <div id="webProjects" className="relative flex justify-center items-center flex-col md:gap-24 gap-12 mb-32">
             <AnimatePresence>
                 <motion.div
                 layoutRoot

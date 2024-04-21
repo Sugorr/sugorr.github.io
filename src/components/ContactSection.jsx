@@ -8,7 +8,7 @@ export default function ContactSection () {
 
     
     return (
-        <motion.div className="relative flex flex-col justify-center items-center md:gap-24 gap-12 md:mt-32 px-24 pt-12 pb-4">
+        <motion.div id="contactSection" className="relative flex flex-col justify-center items-center md:gap-24 gap-12 md:mt-32 px-24 pt-12 pb-4">
             <motion.p ref={targetRef} initial={{ opacity: 0, y: 20 }} animate={{ opacity: textInView ? 1 : 0, y: textInView ? 0 : 20 }} className="md:text-9xl text-5xl text-center font-bold select-none">Let's work together!</motion.p>
             <p className="md:text-xl text-center">critizize.joaquin@gmail.com || reynerajoaquinpau@gmail.com || +63 906 577 3679</p>
             <div className="flex md:flex-row flex-col-reverse gap-2 text-center w-full md:text-sm text-xs justify-around items-center opacity-80">

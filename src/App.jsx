@@ -39,12 +39,12 @@ export default function App () {
                 <>
                     <Navbar />
                     <HeroBanner />
-                    <WebProjects />
+                    <WebProjects /> {/* Make sure to add this id */}
                     <GameProjects />
                     <ThreeDimensionalProjects />
                     <LargeTexts />
                     <SkillsSection />
-                    <ContactSection />
+                    <ContactSection id="contactSection" /> {/* Make sure to add this id */}
                 </>
             )}
         </>

@@ -112,7 +112,7 @@ const ListedItem = ({ text, index }) => {
                 variants={textContainerVariants}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
-                className={`relative md:px-12 px-4 py-2 overflow-hidden transition-all duration-300 filter bg-clip-content ${hoveredItem ? "text-default-white" : "group-hover:blur-md"}`}>
+                className={`relative md:px-12 px-4 py-2 overflow-hidden transition-color duration-300 filter bg-clip-content ${hoveredItem ? "text-default-white" : "group-hover:blur-md"}`}>
                     {text}
                 <AnimatePresence>
                     { hoveredItem && ( 
@@ -125,7 +125,7 @@ const ListedItem = ({ text, index }) => {
                                 scaleY: 1,
                                 transition: {
                                     duration: 0.2,
-                                    ease: "easeIn"
+                                    ease: "easeOut"
                                 }
                             }}
                             exit={{
