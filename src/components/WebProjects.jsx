@@ -48,7 +48,7 @@ const Websites = ({ webs }) => {
                             transition={{
                                 duration: 0.25,
                             }} 
-                            className=" md:text-lg md:line-clamp-6 w-full line-clamp-3 text-xs text-default-black tracking-wide px-5 md:py-4 select-none">
+                            className="md:text-lg md:line-clamp-6 w-full line-clamp-3 text-xs text-default-black tracking-wide px-5 md:py-4 select-none">
                                 {webs.desc}
                             </motion.p>
 
@@ -84,9 +84,9 @@ const webs = [
         link: "https://sugorr.github.io/madies-admin/",
     },
     {
-        title: "Tic Tac Toe",
-        desc: "In a thrilling game of Tic Tac Toe, X strategically placed their mark in the center square, setting the stage for an intense showdown against O's diagonal dominance.",
+        title: "Quacker",
+        desc: "( under-development ) Quack into the Social Scene with Quacker!",
         id: 3,
-        link: "https://sugorr.github.io/game-tic-tac-toe/",
+        link: "https://quacker-site.web.app",
     },
 ];
