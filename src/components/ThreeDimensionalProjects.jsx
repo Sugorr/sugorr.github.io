@@ -99,7 +99,7 @@ const GridObject = ({ id, col, row, bg, dir, objSize }) => {
                     opacity: 0,
                 }}
                 onClick={() => setSelectedId(null)}
-                className="fixed p-8 inset-0 grid grid-cols-4 backdrop-blur-md z-20 bg-default-white/15 place-items-center overflow-y-scroll">
+                className="fixed p-8 inset-0 grid grid-cols-4 backdrop-blur-md z-20 bg-default-black/50 place-items-center overflow-y-scroll">
                     <motion.div
                     layoutId={selectedId}
                     className={`md:w-[80vh] md:h-[80vh] w-[80vw] h-[80vw] relative col-start-2 col-span-2 row-span-2 rounded-lg ${bg} bg-cover bg-center overflow-hidden`}>

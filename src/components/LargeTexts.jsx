@@ -59,10 +59,10 @@ export default function LargeTexts() {
     const textInView = useInView(textRef, {margin: "0px 0px -220px 0px"})
 
     const firstList = useRef(null);
-    const firstListInView = useInView(firstList, {margin: "0px 0px -180px 0px", once: true});
+    const firstListInView = useInView(firstList, {margin: "0px 0px -180px 0px"});
 
     const secondList = useRef(null);
-    const secondListInView = useInView(secondList, {margin: "0px 0px -180px 0px", once: true});
+    const secondListInView = useInView(secondList, {margin: "0px 0px -180px 0px"});
 
     return (
         <>
