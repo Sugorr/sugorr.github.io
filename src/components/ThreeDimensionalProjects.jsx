@@ -18,7 +18,7 @@ export default function ThreeDimensionalProjects () {
                 className="grid grid-auto grid-cols-4 group md:gap-4 gap-2 w-[70vw] h-[140vw] overflow-hidden"
                 >
                     {Objects.map((obj, index) => (
-                        <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id}/>
+                        <GridObject key={index} col={obj.col} row={obj.row} bg={obj.bg} dir={obj.dir} id={obj.id} loading="lazy"/>
                     ))}
             </motion.div>
         </div>
